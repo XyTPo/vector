@@ -8,13 +8,35 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">  
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&display=swap" rel="stylesheet"> 
+<script
+  src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 <body>
 <div class="pie__wrap">
   <svg version="1.1" id="pie" class="pie" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
     viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">
+    <g id="pie__shadow" class="pie__shadow">
+      <path class="pie__part pie__part_shadow" data-index="6" style="fill:#D5D5D5" d="M500.25,499.85l-419.11,0.01c-0.05-51.18,9.27-102.86,28.69-152.43c0.85-2.14,1.7-4.29,2.57-6.43
+        c7.08-17.19,15.38-34.12,24.93-50.68c8.42-14.58,17.57-28.46,27.41-41.62c1.32-1.78,2.67-3.55,4.03-5.3
+        c34.01-44.1,75.65-79.86,121.92-106.51L500.25,499.85z"/>
+      <path class="pie__part pie__part_shadow" data-index="5" style="fill:#D5D5D5" d="M500.25,499.85L290.7,862.81c-39.16-22.56-75-51.63-105.7-86.77c-5.6-6.38-11-12.96-16.22-19.74
+        c-11.37-14.72-21.88-30.38-31.44-46.93c-5.28-9.14-10.17-18.39-14.69-27.75c-3.66-7.58-7.07-15.23-10.24-22.92
+        c-21.17-51.52-31.32-105.46-31.27-158.86L500.25,499.85z"/>
+      <path class="pie__part pie__part_shadow" data-index="4" style="fill:#D5D5D5" d="M709.81,862.8c-42.53,24.62-89.8,41.96-140.09,50.36c-4.35,0.74-8.73,1.38-13.11,1.97
+        c-18.43,2.49-37.25,3.76-56.36,3.76c-11.63,0-23.14-0.48-34.54-1.4c-7.33-0.6-14.61-1.38-21.82-2.36
+        c-55.2-7.41-106.98-25.58-153.2-52.33l209.56-362.95L709.81,862.8z"/>
+      <path class="pie__part pie__part_shadow" data-index="3" style="fill:#D5D5D5" d="M919.36,499.83c0.05,53.4-10.1,107.34-31.27,158.86c-1.74,4.2-3.54,8.41-5.43,12.58
+        c-5.78,12.88-12.29,25.6-19.51,38.1c-9.38,16.25-19.69,31.64-30.83,46.12c-0.19,0.27-0.39,0.54-0.61,0.81
+        c-34.01,44.1-75.65,79.86-121.92,106.51L500.25,499.85L919.36,499.83z"/>
+      <path class="pie__part pie__part_shadow" data-index="2" style="fill:#D5D5D5" d="M919.36,499.86l-419.11-0.01l209.55-362.97c46.27,26.65,87.9,62.42,121.92,106.51
+        c5.21,6.74,10.23,13.66,15.05,20.79c5.75,8.44,11.21,17.15,16.39,26.14c9.56,16.55,17.85,33.49,24.94,50.68
+        c3.01,7.35,5.81,14.74,8.38,22.18C911.94,407.89,919.41,454.07,919.36,499.86z"/>
+      <path class="pie__part pie__part_shadow" data-index="1" style="fill:#D5D5D5" d="M709.81,136.89L500.25,499.85L290.69,136.89c46.22-26.75,98-44.92,153.2-52.33c4.42-0.6,8.88-1.13,13.36-1.58
+        c14.14-1.45,28.49-2.18,43.01-2.18c19.11,0,37.94,1.27,56.36,3.76c4.56,0.6,9.09,1.29,13.6,2.05
+        C620.31,95.04,667.41,112.35,709.81,136.89z"/>
+    </g>
     <g id="pie">
-      <g class="pie__part" id="pie_x5F_p6">
+      <g class="pie__part form-trigger" data-index="6" id="pie_x5F_p6">
         <path class="st1" d="M500.25,499.85l-419.11,0.01c-0.05-51.18,9.27-102.86,28.69-152.43c0.85-2.14,1.7-4.29,2.57-6.43
           c7.08-17.19,15.38-34.12,24.93-50.68c8.42-14.58,17.57-28.46,27.41-41.62c1.32-1.78,2.67-3.55,4.03-5.3
           c34.01-44.1,75.65-79.86,121.92-106.51L500.25,499.85z"/>
@@ -133,7 +155,7 @@
           </div>
         </foreignObject>
       </g>
-      <g class="pie__part" id="pie_x5F_p5">
+      <g class="pie__part form-trigger" data-index="5" id="pie_x5F_p5">
         <path class="st15" d="M500.25,499.85L290.7,862.81c-39.16-22.56-75-51.63-105.7-86.77c-5.6-6.38-11-12.96-16.22-19.74
           c-11.37-14.72-21.88-30.38-31.44-46.93c-5.28-9.14-10.17-18.39-14.69-27.75c-3.66-7.58-7.07-15.23-10.24-22.92
           c-21.17-51.52-31.32-105.46-31.27-158.86L500.25,499.85z"/>
@@ -247,7 +269,7 @@
           </div>
         </foreignObject>
       </g>
-      <g class="pie__part" id="pie_x5F_p4">
+      <g class="pie__part form-trigger" data-index="4" id="pie_x5F_p4">
         <path class="st26" d="M709.81,862.8c-42.53,24.62-89.8,41.96-140.09,50.36c-4.35,0.74-8.73,1.38-13.11,1.97
           c-18.43,2.49-37.25,3.76-56.36,3.76c-11.63,0-23.14-0.48-34.54-1.4c-7.33-0.6-14.61-1.38-21.82-2.36
           c-55.2-7.41-106.98-25.58-153.2-52.33l209.56-362.95L709.81,862.8z"/>
@@ -375,7 +397,7 @@
           </div>
         </foreignObject>
       </g>
-      <g class="pie__part" id="pie_x5F_p3">
+      <g class="pie__part form-trigger" data-index="3" id="pie_x5F_p3">
         <path class="st38" d="M919.36,499.83c0.05,53.4-10.1,107.34-31.27,158.86c-1.74,4.2-3.54,8.41-5.43,12.58
           c-5.78,12.88-12.29,25.6-19.51,38.1c-9.38,16.25-19.69,31.64-30.83,46.12c-0.19,0.27-0.39,0.54-0.61,0.81
           c-34.01,44.1-75.65,79.86-121.92,106.51L500.25,499.85L919.36,499.83z"/>
@@ -532,7 +554,7 @@
           </div>
         </foreignObject>
       </g>
-      <g class="pie__part" id="pie_x5F_p2">
+      <g class="pie__part form-trigger" data-index="2" id="pie_x5F_p2">
         <path class="st49" d="M919.36,499.86l-419.11-0.01l209.55-362.97c46.27,26.65,87.9,62.42,121.92,106.51
           c5.21,6.74,10.23,13.66,15.05,20.79c5.75,8.44,11.21,17.15,16.39,26.14c9.56,16.55,17.85,33.49,24.94,50.68
           c3.01,7.35,5.81,14.74,8.38,22.18C911.94,407.89,919.41,454.07,919.36,499.86z"/>
@@ -664,7 +686,7 @@
           </div>
         </foreignObject>
       </g>
-      <g class="pie__part" id="pie_x5F_p1">
+      <g class="pie__part form-trigger" data-index="1" id="pie_x5F_p1">
         <path class="st61" d="M709.81,136.89L500.25,499.85L290.69,136.89c46.22-26.75,98-44.92,153.2-52.33
           c4.42-0.6,8.88-1.13,13.36-1.58c14.14-1.45,28.49-2.18,43.01-2.18c19.11,0,37.94,1.27,56.36,3.76c4.56,0.6,9.09,1.29,13.6,2.05
           C620.31,95.04,667.41,112.35,709.81,136.89z"/>
@@ -871,6 +893,18 @@
   </svg>
   <div class="pie__mid-shadow"></div>  
 </div>
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) { 
+    $('.pie__part').hover(function(){
+      $(this).parents('.pie__wrap').find('[data-index="'+ $(this).data('index') +'"]').addClass('hover');
+    }, function(){
+      $(this).parents('.pie__wrap').find('[data-index="'+ $(this).data('index') +'"]').removeClass('hover');
+    });
+    $('.form-trigger').click(function(){
+      console.log('Form Displayed!')
+    });
+  });
+</script>
 
 </body>
 </html>

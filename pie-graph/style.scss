@@ -86,24 +86,14 @@
 	.st82{fill:url(#SVGID_49_);}
   .st83{fill:url(#SVGID_50_);}  
   
+  &__shadow {
+		transform: translate(25px,25px);
+		filter: blur(15px);
+	}
   &__wrap {
     width: 740px;
     height: 740px;
     position: relative;
-    &::before {
-      content: '';
-      position: absolute;
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      margin: auto;
-      pointer-events: none;
-      max-width: 83%;
-      max-height: 83%;
-      border-radius: 50%;
-      box-shadow: 15px 15px 25px rgba(0,0,0,0.3);
-    }
   }
   &__mid-shadow {
     position: absolute;
@@ -135,8 +125,11 @@
   &__part {
     transition: 0.2s;
     transform-origin: 50% 50%;
-    cursor: pointer;
-    &:hover {
+		cursor: pointer;
+		&_shadow {
+			transition: 0.1s;
+		}
+    &:hover, &.hover {
       transform: scale(1.08);
     }
     &-text {
