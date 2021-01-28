@@ -41,7 +41,7 @@
           c14.14-1.45,28.49-2.18,43.01-2.18c19.11,0,37.94,1.27,56.36,3.76c4.56,0.6,9.09,1.29,13.6,2.05
           C620.31,95.04,667.41,112.35,709.81,136.89z"/>
       </g>
-      <g id="pie">
+      <g id="pie__body" class="pie__body">
         <g class="pie__part form-trigger" data-index="6" id="pie_x5F_p6">
           <path class="st1" d="M500.25,499.85l-419.11,0.01c-0.05-51.18,9.27-102.86,28.69-152.43c0.85-2.14,1.7-4.29,2.57-6.43
             c7.08-17.19,15.38-34.12,24.93-50.68c8.42-14.58,17.57-28.46,27.41-41.62c1.32-1.78,2.67-3.55,4.03-5.3
@@ -902,10 +902,10 @@
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", function(event) { 
-    $('.pie__part').hover(function(){
-      $(this).parents('.pie__wrap').find('[data-index="'+ $(this).data('index') +'"]').addClass('hover');
+    $('.pie__body .pie__part').hover(function(){
+      $(this).parents('.pie__block').find('[data-index="'+ $(this).data('index') +'"]').addClass('hover');
     }, function(){
-      $(this).parents('.pie__wrap').find('[data-index="'+ $(this).data('index') +'"]').removeClass('hover');
+      $(this).parents('.pie__block').find('[data-index="'+ $(this).data('index') +'"]').removeClass('hover');
     });
     $('.form-trigger').click(function(){
       alert('Form Displayed!');
