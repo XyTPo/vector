@@ -125,11 +125,21 @@
     transition: 0.2s;
     transform-origin: 50% 50%;
 		cursor: pointer;
+		-webkit-tap-highlight-color: transparent;
+		-webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none
 		&_shadow {
 			transition: 0.1s;
 		}
     &:hover, &.hover {
-      transform: scale(1.08);
+			transform: scale(1.08);
+			@media (hover: none) and (pointer: coarse) {
+				transform: none;
+			}
     }
     &-text {
       color: #fff;
