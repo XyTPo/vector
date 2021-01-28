@@ -12,891 +12,893 @@
   src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 </head>
 <body>
-<div class="pie__wrap">
-  <svg version="1.1" id="pie" class="pie" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-    viewBox="0 0 1000 1000" style="enable-background:new 0 0 1000 1000;" xml:space="preserve">    
-    <defs>
-      <filter id="feBlur" x="0" y="0">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
-      </filter>
-    </defs>
-    <g id="pie__shadow" class="pie__shadow" filter="url(#feBlur)">
-      <path class="pie__part pie__part_shadow" data-index="6" style="fill:#D5D5D5" d="M500.25,499.85l-419.11,0.01c-0.05-51.18,9.27-102.86,28.69-152.43c0.85-2.14,1.7-4.29,2.57-6.43
-        c7.08-17.19,15.38-34.12,24.93-50.68c8.42-14.58,17.57-28.46,27.41-41.62c1.32-1.78,2.67-3.55,4.03-5.3
-        c34.01-44.1,75.65-79.86,121.92-106.51L500.25,499.85z" />
-      <path class="pie__part pie__part_shadow" data-index="5" style="fill:#D5D5D5" d="M500.25,499.85L290.7,862.81c-39.16-22.56-75-51.63-105.7-86.77c-5.6-6.38-11-12.96-16.22-19.74
-        c-11.37-14.72-21.88-30.38-31.44-46.93c-5.28-9.14-10.17-18.39-14.69-27.75c-3.66-7.58-7.07-15.23-10.24-22.92
-        c-21.17-51.52-31.32-105.46-31.27-158.86L500.25,499.85z"/>
-      <path class="pie__part pie__part_shadow" data-index="4" style="fill:#D5D5D5" d="M709.81,862.8c-42.53,24.62-89.8,41.96-140.09,50.36c-4.35,0.74-8.73,1.38-13.11,1.97
-        c-18.43,2.49-37.25,3.76-56.36,3.76c-11.63,0-23.14-0.48-34.54-1.4c-7.33-0.6-14.61-1.38-21.82-2.36
-        c-55.2-7.41-106.98-25.58-153.2-52.33l209.56-362.95L709.81,862.8z"/>
-      <path class="pie__part pie__part_shadow" data-index="3" style="fill:#D5D5D5" d="M919.36,499.83c0.05,53.4-10.1,107.34-31.27,158.86c-1.74,4.2-3.54,8.41-5.43,12.58
-        c-5.78,12.88-12.29,25.6-19.51,38.1c-9.38,16.25-19.69,31.64-30.83,46.12c-0.19,0.27-0.39,0.54-0.61,0.81
-        c-34.01,44.1-75.65,79.86-121.92,106.51L500.25,499.85L919.36,499.83z"/>
-      <path class="pie__part pie__part_shadow" data-index="2" style="fill:#D5D5D5" d="M919.36,499.86l-419.11-0.01l209.55-362.97c46.27,26.65,87.9,62.42,121.92,106.51
-        c5.21,6.74,10.23,13.66,15.05,20.79c5.75,8.44,11.21,17.15,16.39,26.14c9.56,16.55,17.85,33.49,24.94,50.68
-        c3.01,7.35,5.81,14.74,8.38,22.18C911.94,407.89,919.41,454.07,919.36,499.86z"/>
-      <path class="pie__part pie__part_shadow" data-index="1" style="fill:#D5D5D5" d="M709.81,136.89L500.25,499.85L290.69,136.89c46.22-26.75,98-44.92,153.2-52.33c4.42-0.6,8.88-1.13,13.36-1.58
-        c14.14-1.45,28.49-2.18,43.01-2.18c19.11,0,37.94,1.27,56.36,3.76c4.56,0.6,9.09,1.29,13.6,2.05
-        C620.31,95.04,667.41,112.35,709.81,136.89z"/>
-    </g>
-    <g id="pie">
-      <g class="pie__part form-trigger" data-index="6" id="pie_x5F_p6">
-        <path class="st1" d="M500.25,499.85l-419.11,0.01c-0.05-51.18,9.27-102.86,28.69-152.43c0.85-2.14,1.7-4.29,2.57-6.43
+<div class="pie">
+  <div class="pie__block">
+    <svg version="1.1" id="pie__svg" class="pie__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+      viewBox="0 0 1000 1000" xml:space="preserve">    
+      <defs>
+        <filter id="feBlur" x="0" y="0">
+          <feGaussianBlur in="SourceGraphic" stdDeviation="15" />
+        </filter>
+      </defs>
+      <g id="pie__shadow" class="pie__shadow" filter="url(#feBlur)">
+        <path class="pie__part pie__part_shadow" data-index="6" style="fill:#D5D5D5" d="M500.25,499.85l-419.11,0.01c-0.05-51.18,9.27-102.86,28.69-152.43c0.85-2.14,1.7-4.29,2.57-6.43
           c7.08-17.19,15.38-34.12,24.93-50.68c8.42-14.58,17.57-28.46,27.41-41.62c1.32-1.78,2.67-3.55,4.03-5.3
-          c34.01-44.1,75.65-79.86,121.92-106.51L500.25,499.85z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="81.26" y="377.29" width="419.04" height="122.56">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="81.26" y="377.29" width="419.04" height="122.56" id="SVGID_1_">
-          <g class="st2">
-            
-              <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="7660.2979" y1="8197.8105" x2="7782.8599" y2="8197.8105" gradientTransform="matrix(0 1 -1 0 8523.9727 -7283.0044)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st3" d="M514.07,476.01l-13.77,23.85H81.32l-0.07-0.06c0.01-7.94,0.25-15.88,0.7-23.79
-              c0.46-7.98,1.15-15.93,2.07-23.86c2.92-25.4,8.16-50.46,15.62-74.86h471.42l-43.23,74.86L514.07,476.01z"/>
-          </g>
-        </mask>
-        
-          <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="7660.2979" y1="8233.1963" x2="7782.8599" y2="8233.1963" gradientTransform="matrix(0 1 -1 0 8523.9727 -7283.0044)">
-          <stop  offset="0" style="stop-color:#FFFFFF"/>
-          <stop  offset="1" style="stop-color:#000000"/>
-        </linearGradient>
-        <path class="st4" d="M500.29,499.86H81.32l-0.07-0.06c0.01-7.94,0.25-15.88,0.7-23.79c0.46-7.98,1.15-15.93,2.07-23.86
-          c2.92-25.4,8.16-50.46,15.62-74.86h329.83L500.29,499.86z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="81.26" y="452.15" width="419.04" height="47.7">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="81.26" y="452.15" width="419.04" height="47.7" id="SVGID_4_">
-          <g class="st5">
-            
-              <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="7735.1548" y1="8219.4248" x2="7782.8599" y2="8219.4248" gradientTransform="matrix(0 1 -1 0 8523.9727 -7283.0044)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st6" d="M500.29,499.86H81.32l-0.07-0.06c0.01-7.94,0.25-15.88,0.7-23.79c0.46-7.98,1.15-15.93,2.07-23.86h443.81
-              l-13.77,23.86L500.29,499.86z"/>
-          </g>
-        </mask>
-        <path class="st7" d="M500.29,499.86H81.32l-0.07-0.06c0.01-7.94,0.25-15.88,0.7-23.79c0.46-7.98,1.15-15.93,2.07-23.86H472.7
-          L500.29,499.86z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_2_" filterUnits="userSpaceOnUse" x="81.26" y="476.01" width="419.04" height="23.85">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="81.26" y="476.01" width="419.04" height="23.85" id="SVGID_6_">
-          <g class="st8">
-            
-              <linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="7759.0122" y1="8226.3105" x2="7782.8599" y2="8226.3105" gradientTransform="matrix(0 1 -1 0 8523.9727 -7283.0044)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st9" d="M514.07,476.01l-13.77,23.85H81.32l-0.07-0.06c0.01-7.94,0.25-15.88,0.7-23.79H514.07z"/>
-          </g>
-        </mask>
-        <path class="st10" d="M500.29,499.86H81.32l-0.07-0.06c0.01-7.94,0.25-15.88,0.7-23.79h404.51L500.29,499.86z"/>
-        <g id="pie_x5F_p6_x5F_icon">
-          <circle class="st11" cx="230.45" cy="421.17" r="21"/>
-          <path class="st12" d="M237.29,433.36c-0.93-0.93-1.71-2.01-2.28-3.2l-0.07-0.13l-2.63-4.27c-0.11-0.18-0.18-0.39-0.18-0.62
-            c0-0.65,0.52-1.17,1.17-1.17c0.39,0,0.75,0.2,0.96,0.51l1.62,2.32v-0.16v-8.98c0-0.65,0.52-1.17,1.17-1.17
-            c0.65,0,1.17,0.52,1.17,1.17v4.69c0-0.65,0.52-1.17,1.17-1.17c0.65,0,1.17,0.52,1.17,1.17v0.47c0-0.65,0.52-1.17,1.17-1.17
-            c0.65,0,1.17,0.52,1.17,1.17v0.47c0-0.65,0.53-1.17,1.17-1.17s1.17,0.52,1.17,1.17v6.96l-0.94,3.12"/>
-          <path class="st12" d="M235.88,426.8v0.94"/>
-          <path class="st12" d="M232.13,416.48h-3.75v2.81h3.75V416.48z"/>
-          <path class="st12" d="M226.04,416.48h-3.75v2.81h3.75V416.48z"/>
-          <path class="st13" d="M234.95,419.3h-0.94v-2.81h1.17"/>
-          <path class="st12" d="M238.23,410.39h-15.94v3.75h15.94V410.39z"/>
-          <path class="st13" d="M234.01,431.01h-14.06v-22.97h20.63v12.21"/>
-          <path class="st13" d="M231.2,423.98h-2.81v-2.81h3.75v1.88"/>
-          <path class="st12" d="M226.04,421.17h-3.75v2.81h3.75V421.17z"/>
-          <path class="st13" d="M231.2,425.86h-2.81v2.81h3.75v-0.94"/>
-          <path class="st12" d="M226.04,425.86h-3.75v2.81h3.75V425.86z"/>
-        </g>
-        <g id="pie_x5F_p6_x5F_number">
-          <circle class="st14" cx="230.4" cy="308.89" r="21"/>
-          <path class="st11" d="M232.15,307.9c0.81,0,1.55,0.16,2.22,0.49c0.67,0.33,1.2,0.79,1.58,1.4c0.39,0.59,0.58,1.29,0.58,2.07
-            c0,0.85-0.21,1.6-0.64,2.24c-0.42,0.64-1.01,1.14-1.75,1.49c-0.73,0.34-1.54,0.51-2.44,0.51c-1.78,0-3.18-0.55-4.19-1.64
-            c-1.01-1.09-1.51-2.65-1.51-4.68c0-1.44,0.27-2.68,0.82-3.71c0.55-1.03,1.3-1.81,2.27-2.35c0.98-0.53,2.12-0.8,3.4-0.8
-            c0.68,0,1.33,0.08,1.95,0.24c0.63,0.15,1.16,0.36,1.6,0.64l-1.09,2.17c-0.63-0.42-1.43-0.64-2.38-0.64
-            c-1.08,0-1.94,0.32-2.57,0.95c-0.63,0.63-0.97,1.55-1.02,2.75C229.76,308.28,230.81,307.9,232.15,307.9z M231.55,313.91
-            c0.63,0,1.14-0.17,1.53-0.51c0.4-0.34,0.6-0.8,0.6-1.38s-0.2-1.04-0.6-1.38c-0.39-0.35-0.91-0.53-1.57-0.53
-            c-0.64,0-1.17,0.18-1.58,0.55c-0.41,0.35-0.62,0.81-0.62,1.37c0,0.56,0.2,1.01,0.6,1.36
-            C230.32,313.73,230.86,313.91,231.55,313.91z"/>
-        </g>      
-        <foreignObject x="108" y="341" height="50" width="270">
-          <div class="pie__part-text" xmlns="http://www.w3.org/1999/xhtml">
-            Implements the best<br>strategy for you
-          </div>
-        </foreignObject>
-      </g>
-      <g class="pie__part form-trigger" data-index="5" id="pie_x5F_p5">
-        <path class="st15" d="M500.25,499.85L290.7,862.81c-39.16-22.56-75-51.63-105.7-86.77c-5.6-6.38-11-12.96-16.22-19.74
+          c34.01-44.1,75.65-79.86,121.92-106.51L500.25,499.85z" />
+        <path class="pie__part pie__part_shadow" data-index="5" style="fill:#D5D5D5" d="M500.25,499.85L290.7,862.81c-39.16-22.56-75-51.63-105.7-86.77c-5.6-6.38-11-12.96-16.22-19.74
           c-11.37-14.72-21.88-30.38-31.44-46.93c-5.28-9.14-10.17-18.39-14.69-27.75c-3.66-7.58-7.07-15.23-10.24-22.92
           c-21.17-51.52-31.32-105.46-31.27-158.86L500.25,499.85z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_3_" filterUnits="userSpaceOnUse" x="193.81" y="499.81" width="306.47" height="362.87">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="193.81" y="499.81" width="306.47" height="362.87" id="SVGID_8_">
-          <g class="st16">
-            
-              <linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="1315.0135" y1="4694.9023" x2="1437.5842" y2="4694.9023" gradientTransform="matrix(0.866 0.5 -0.5 0.866 1515.7181 -4133.9619)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st17" d="M486.51,475.96l13.77,23.85L290.79,862.65l-0.08,0.03c-6.87-3.98-13.63-8.15-20.25-12.51
-              c-6.68-4.39-13.22-8.96-19.63-13.72c-20.54-15.23-39.62-32.3-57.02-50.95l235.71-408.26l43.21,74.87L486.51,475.96z"/>
-          </g>
-        </mask>
-        
-          <linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="1315.0154" y1="4730.2881" x2="1437.5842" y2="4730.2881" gradientTransform="matrix(0.866 0.5 -0.5 0.866 1515.7181 -4133.9619)">
-          <stop  offset="0" style="stop-color:#FFFFFF"/>
-          <stop  offset="1" style="stop-color:#000000"/>
-        </linearGradient>
-        <path class="st18" d="M500.28,499.81L290.79,862.65l-0.08,0.03c-6.87-3.98-13.63-8.15-20.25-12.51
-          c-6.68-4.39-13.22-8.96-19.63-13.72c-20.54-15.23-39.62-32.3-57.02-50.95L358.65,500L500.28,499.81z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_4_" filterUnits="userSpaceOnUse" x="250.83" y="499.81" width="249.45" height="362.87">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="250.83" y="499.81" width="249.45" height="362.87" id="SVGID_11_">
-          <g class="st19">
-            
-              <linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="1389.8728" y1="4716.5166" x2="1437.5842" y2="4716.5166" gradientTransform="matrix(0.866 0.5 -0.5 0.866 1515.7181 -4133.9619)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st20" d="M500.28,499.81L290.79,862.65l-0.08,0.03c-6.87-3.98-13.63-8.15-20.25-12.51
-              c-6.68-4.39-13.22-8.96-19.63-13.72l221.9-384.35l13.78,23.86L500.28,499.81z"/>
-          </g>
-        </mask>
-        <path class="st21" d="M500.28,499.81L290.79,862.65l-0.08,0.03c-6.87-3.98-13.63-8.15-20.25-12.51
-          c-6.68-4.39-13.22-8.96-19.63-13.72L445.08,500L500.28,499.81z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_5_" filterUnits="userSpaceOnUse" x="270.46" y="499.81" width="229.82" height="362.87">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="270.46" y="499.81" width="229.82" height="362.87" id="SVGID_13_">
-          <g class="st22">
-            
-              <linearGradient id="SVGID_14_" gradientUnits="userSpaceOnUse" x1="1413.7306" y1="4723.4023" x2="1437.5842" y2="4723.4023" gradientTransform="matrix(0.866 0.5 -0.5 0.866 1515.7181 -4133.9619)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st23" d="M486.51,475.96l13.77,23.85L290.79,862.65l-0.08,0.03c-6.87-3.98-13.63-8.15-20.25-12.51L486.51,475.96z"
-              />
-          </g>
-        </mask>
-        <path class="st24" d="M500.28,499.81L290.79,862.65l-0.08,0.03c-6.87-3.98-13.63-8.15-20.25-12.51L472.63,500L500.28,499.81z"/>
-        <g id="pie_x5F_p5_x5F_icon">
-          <circle class="st11" cx="232.55" cy="686.62" r="21"/>
-          <path class="st25" d="M220.27,680.43h-2.16v15.09c0,1.19,0.97,2.16,2.16,2.16c1.19,0,2.16-0.97,2.16-2.16v-19.41h24.8v19.41
-            c0,1.19-0.97,2.16-2.16,2.16h-24.8"/>
-          <path class="st25" d="M225.12,679.35h19.41"/>
-          <path class="st25" d="M229.44,682.05h-4.31v4.31h4.31V682.05z"/>
-          <path class="st25" d="M244.53,682.05h-12.4v4.31h12.4V682.05z"/>
-          <path class="st25" d="M229.44,689.05h-4.31"/>
-          <path class="st25" d="M244.53,689.05h-12.4"/>
-          <path class="st25" d="M229.44,691.75h-4.31"/>
-          <path class="st25" d="M244.53,691.75h-12.4"/>
-          <path class="st25" d="M229.44,694.45h-4.31"/>
-          <path class="st25" d="M244.53,694.45h-12.4"/>
-        </g>
-        <g id="pie_x5F_p5_x5F_number">
-          <circle class="st14" cx="232.96" cy="576.38" r="21"/>
-          <path class="st11" d="M232.62,575.43c1.8,0,3.12,0.36,3.97,1.07c0.86,0.72,1.29,1.67,1.29,2.88c0,0.78-0.19,1.49-0.58,2.13
-            c-0.39,0.63-0.98,1.14-1.78,1.53c-0.79,0.38-1.77,0.56-2.93,0.56c-0.9,0-1.78-0.12-2.66-0.35c-0.86-0.24-1.6-0.58-2.2-1.02
-            l1.16-2.26c0.49,0.36,1.04,0.65,1.67,0.86c0.63,0.19,1.28,0.29,1.95,0.29c0.74,0,1.32-0.15,1.75-0.44
-            c0.42-0.29,0.64-0.7,0.64-1.22c0-0.55-0.22-0.96-0.67-1.24c-0.44-0.28-1.2-0.42-2.29-0.42h-3.26l0.66-7.17h7.77v2.37h-5.31
-            l-0.2,2.42H232.62z"/>
-        </g>
-        <foreignObject x="97" y="605" height="50" width="270">
-          <div class="pie__part-text" xmlns="http://www.w3.org/1999/xhtml">
-            Creates a<br>Financial Plan
-          </div>
-        </foreignObject>
-      </g>
-      <g class="pie__part form-trigger" data-index="4" id="pie_x5F_p4">
-        <path class="st26" d="M709.81,862.8c-42.53,24.62-89.8,41.96-140.09,50.36c-4.35,0.74-8.73,1.38-13.11,1.97
+        <path class="pie__part pie__part_shadow" data-index="4" style="fill:#D5D5D5" d="M709.81,862.8c-42.53,24.62-89.8,41.96-140.09,50.36c-4.35,0.74-8.73,1.38-13.11,1.97
           c-18.43,2.49-37.25,3.76-56.36,3.76c-11.63,0-23.14-0.48-34.54-1.4c-7.33-0.6-14.61-1.38-21.82-2.36
           c-55.2-7.41-106.98-25.58-153.2-52.33l209.56-362.95L709.81,862.8z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_6_" filterUnits="userSpaceOnUse" x="429.49" y="499.8" width="280.22" height="408.25">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="429.49" y="499.8" width="280.22" height="408.25" id="SVGID_15_">
-          <g class="st27">
-            
-              <linearGradient id="SVGID_16_" gradientUnits="userSpaceOnUse" x1="1175.7083" y1="-2552.0452" x2="1298.278" y2="-2552.0452" gradientTransform="matrix(0.866 -0.5 0.5 0.866 739.0141 3509.8125)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st28" d="M472.69,499.8l27.54,0l209.49,362.84l-0.02,0.09c-6.88,3.96-13.87,7.72-20.96,11.28
-              c-7.14,3.59-14.37,6.97-21.69,10.14c-23.46,10.17-47.78,18.16-72.64,23.9L358.7,499.79l86.44,0.01L472.69,499.8z"/>
-          </g>
-        </mask>
-        
-          <linearGradient id="SVGID_17_" gradientUnits="userSpaceOnUse" x1="1175.7083" y1="-2516.658" x2="1298.278" y2="-2516.658" gradientTransform="matrix(0.866 -0.5 0.5 0.866 739.0141 3509.8125)">
-          <stop  offset="0" style="stop-color:#FFFFFF"/>
-          <stop  offset="1" style="stop-color:#000000"/>
-        </linearGradient>
-        <path class="st29" d="M500.23,499.8l209.49,362.84l-0.02,0.09c-6.88,3.96-13.87,7.72-20.96,11.28
-          c-7.14,3.59-14.37,6.97-21.69,10.14c-23.46,10.17-47.78,18.16-72.64,23.9L429.49,622.4L500.23,499.8z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_7_" filterUnits="userSpaceOnUse" x="472.71" y="499.8" width="237" height="384.35">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="472.71" y="499.8" width="237" height="384.35" id="SVGID_18_">
-          <g class="st30">
-            
-              <linearGradient id="SVGID_19_" gradientUnits="userSpaceOnUse" x1="1250.5668" y1="-2530.4299" x2="1298.278" y2="-2530.4299" gradientTransform="matrix(0.866 -0.5 0.5 0.866 739.0141 3509.8125)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st31" d="M500.23,499.8l209.49,362.84l-0.02,0.09c-6.88,3.96-13.87,7.72-20.96,11.28
-              c-7.14,3.59-14.37,6.97-21.69,10.14L445.15,499.8l27.55,0L500.23,499.8z"/>
-          </g>
-        </mask>
-        <path class="st32" d="M500.23,499.8l209.49,362.84l-0.02,0.09c-6.88,3.96-13.87,7.72-20.96,11.28
-          c-7.14,3.59-14.37,6.97-21.69,10.14l-194.34-336.6L500.23,499.8z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_8_" filterUnits="userSpaceOnUse" x="486.48" y="499.8" width="223.23" height="374.21">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="486.48" y="499.8" width="223.23" height="374.21" id="SVGID_20_">
-          <g class="st33">
-            
-              <linearGradient id="SVGID_21_" gradientUnits="userSpaceOnUse" x1="1274.4244" y1="-2523.5439" x2="1298.278" y2="-2523.5439" gradientTransform="matrix(0.866 -0.5 0.5 0.866 739.0141 3509.8125)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st34" d="M472.69,499.8l27.54,0l209.49,362.84l-0.02,0.09c-6.88,3.96-13.87,7.72-20.96,11.28L472.69,499.8z"/>
-          </g>
-        </mask>
-        <path class="st35" d="M500.23,499.8l209.49,362.84l-0.02,0.09c-6.88,3.96-13.87,7.72-20.96,11.28L486.48,523.68L500.23,499.8z"/>
-        <g id="pie_x5F_p4_x5F_icon">
-          <circle class="st11" cx="498.96" cy="857.53" r="21"/>
-          <path class="st36" d="M508.29,862.69c1.99,0,3.61-0.69,3.61-1.55s-1.62-1.55-3.61-1.55c-1.99,0-3.61,0.69-3.61,1.55
-            S506.29,862.69,508.29,862.69z"/>
-          <path class="st36" d="M508.29,862.69c1.99,0,3.61-0.69,3.61-1.55s-1.62-1.55-3.61-1.55c-1.99,0-3.61,0.69-3.61,1.55
-            S506.29,862.69,508.29,862.69z"/>
-          <path class="st36" d="M508.29,862.69c1.99,0,3.61-0.69,3.61-1.55s-1.62-1.55-3.61-1.55c-1.99,0-3.61,0.69-3.61,1.55
-            S506.29,862.69,508.29,862.69z"/>
-          <path class="st36" d="M504.68,863.2c0,0.86,1.62,1.55,3.61,1.55c1.99,0,3.61-0.69,3.61-1.55"/>
-          <path class="st36" d="M504.68,865.27c0,0.86,1.62,1.55,3.61,1.55c1.99,0,3.61-0.69,3.61-1.55"/>
-          <path class="st36" d="M504.68,867.33c0,0.86,1.62,1.55,3.61,1.55c1.99,0,3.61-0.69,3.61-1.55"/>
-          <path class="st36" d="M511.9,861.14v2.06v2.06v2.06v2.06c0,0.86-1.61,1.55-3.61,1.55s-3.61-0.69-3.61-1.55v-2.06v-2.06v-2.06
-            v-2.06"/>
-          <path class="st36" d="M501.07,866.81c1.99,0,3.61-0.69,3.61-1.55s-1.62-1.55-3.61-1.55c-1.99,0-3.61,0.69-3.61,1.55
-            S499.07,866.81,501.07,866.81z"/>
-          <path class="st36" d="M501.07,866.81c1.99,0,3.61-0.69,3.61-1.55s-1.62-1.55-3.61-1.55c-1.99,0-3.61,0.69-3.61,1.55
-            S499.07,866.81,501.07,866.81z"/>
-          <path class="st36" d="M501.07,866.81c1.99,0,3.61-0.69,3.61-1.55s-1.62-1.55-3.61-1.55c-1.99,0-3.61,0.69-3.61,1.55
-            S499.07,866.81,501.07,866.81z"/>
-          <path class="st36" d="M497.46,867.33c0,0.86,1.62,1.55,3.61,1.55c1.99,0,3.61-0.69,3.61-1.55"/>
-          <path class="st36" d="M497.46,865.27v2.06v2.06c0,0.86,1.61,1.55,3.61,1.55s3.61-0.69,3.61-1.55"/>
-          <path class="st37" d="M495.91,867.84h-8.77v-19.59"/>
-          <path class="st37" d="M492.3,843.09h12.38v15.98"/>
-          <path class="st36" d="M492.3,848.25h-5.16l5.16-5.16V848.25z"/>
-          <path class="st36" d="M492.3,860.63v-4.13h-2.06v4.13"/>
-          <path class="st36" d="M496.94,860.63v-6.19h-2.06v6.19"/>
-          <path class="st36" d="M501.58,860.63v-7.22h-2.06v7.22"/>
-          <path class="st36" d="M490.24,863.2h5.16"/>
-          <path class="st36" d="M490.24,865.27h3.09"/>
-          <path class="st36" d="M490.24,853.41l11.34-6.7"/>
-          <path class="st36" d="M498.49,846.7h3.09l-1.55,2.58"/>
-        </g>
-        <g id="pie_x5F_p4_x5F_number">
-          <path class="st11" d="M506.61,749.05h-2.07v2.68h-2.88v-2.68h-6.86v-1.98l6.01-8.08h3.09l-5.57,7.66h3.42v-2.38h2.78v2.38h2.07
-            V749.05z"/>
-          <circle class="st14" cx="499.81" cy="744.72" r="21"/>
-        </g>
-        <foreignObject x="325" y="773" height="50" width="350">
-          <div class="pie__part-text" xmlns="http://www.w3.org/1999/xhtml">
-            Assesses your<br>risk profile
-          </div>
-        </foreignObject>
-      </g>
-      <g class="pie__part form-trigger" data-index="3" id="pie_x5F_p3">
-        <path class="st38" d="M919.36,499.83c0.05,53.4-10.1,107.34-31.27,158.86c-1.74,4.2-3.54,8.41-5.43,12.58
+        <path class="pie__part pie__part_shadow" data-index="3" style="fill:#D5D5D5" d="M919.36,499.83c0.05,53.4-10.1,107.34-31.27,158.86c-1.74,4.2-3.54,8.41-5.43,12.58
           c-5.78,12.88-12.29,25.6-19.51,38.1c-9.38,16.25-19.69,31.64-30.83,46.12c-0.19,0.27-0.39,0.54-0.61,0.81
           c-34.01,44.1-75.65,79.86-121.92,106.51L500.25,499.85L919.36,499.83z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_9_" filterUnits="userSpaceOnUse" x="500.2" y="499.84" width="419.04" height="122.56">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="500.2" y="499.84" width="419.04" height="122.56" id="SVGID_22_">
-          <g class="st39">
-            
-              <linearGradient id="SVGID_23_" gradientUnits="userSpaceOnUse" x1="7382.146" y1="-6296.2305" x2="7504.7075" y2="-6296.2305" gradientTransform="matrix(0 -1 1 0 6970.564 8004.5444)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st40" d="M486.43,523.68l13.77-23.85h418.97l0.07,0.06c-0.01,7.94-0.25,15.88-0.7,23.79
-              c-0.46,7.98-1.15,15.93-2.07,23.86c-2.92,25.4-8.16,50.46-15.62,74.86H429.43l43.23-74.86L486.43,523.68z"/>
-          </g>
-        </mask>
-        
-          <linearGradient id="SVGID_24_" gradientUnits="userSpaceOnUse" x1="7382.146" y1="-6260.8452" x2="7504.7075" y2="-6260.8452" gradientTransform="matrix(0 -1 1 0 6970.564 8004.5444)">
-          <stop  offset="0" style="stop-color:#FFFFFF"/>
-          <stop  offset="1" style="stop-color:#000000"/>
-        </linearGradient>
-        <path class="st41" d="M500.2,499.84h418.97l0.07,0.06c-0.01,7.94-0.25,15.88-0.7,23.79c-0.46,7.98-1.15,15.93-2.07,23.86
-          c-2.92,25.4-8.16,50.46-15.62,74.86H571.01L500.2,499.84z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_10_" filterUnits="userSpaceOnUse" x="500.2" y="499.84" width="419.04" height="47.7">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="500.2" y="499.84" width="419.04" height="47.7" id="SVGID_25_">
-          <g class="st42">
-            
-              <linearGradient id="SVGID_26_" gradientUnits="userSpaceOnUse" x1="7457.0029" y1="-6274.6162" x2="7504.7075" y2="-6274.6162" gradientTransform="matrix(0 -1 1 0 6970.564 8004.5444)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st43" d="M500.2,499.84h418.97l0.07,0.06c-0.01,7.94-0.25,15.88-0.7,23.79c-0.46,7.98-1.15,15.93-2.07,23.86H472.66
-              l13.77-23.86L500.2,499.84z"/>
-          </g>
-        </mask>
-        <path class="st44" d="M500.2,499.84h418.97l0.07,0.06c-0.01,7.94-0.25,15.88-0.7,23.79c-0.46,7.98-1.15,15.93-2.07,23.86H527.78
-          L500.2,499.84z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_11_" filterUnits="userSpaceOnUse" x="500.2" y="499.84" width="419.04" height="23.85">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="500.2" y="499.84" width="419.04" height="23.85" id="SVGID_27_">
-          <g class="st45">
-            
-              <linearGradient id="SVGID_28_" gradientUnits="userSpaceOnUse" x1="7480.8599" y1="-6267.7305" x2="7504.7075" y2="-6267.7305" gradientTransform="matrix(0 -1 1 0 6970.564 8004.5444)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st46" d="M486.43,523.68l13.77-23.85h418.97l0.07,0.06c-0.01,7.94-0.25,15.88-0.7,23.79H486.43z"/>
-          </g>
-        </mask>
-        <path class="st47" d="M500.2,499.84h418.97l0.07,0.06c-0.01,7.94-0.25,15.88-0.7,23.79H514.07L500.2,499.84z"/>
-        <g id="pie_x5F_p3_x5F_icon">
-          <circle class="st11" cx="761.3" cy="708.98" r="21"/>
-          <path class="st48" d="M763.65,701.16c5.32,0,9.63-1.78,9.63-3.97s-4.31-3.97-9.63-3.97s-9.63,1.78-9.63,3.97
-            S758.33,701.16,763.65,701.16z"/>
-          <path class="st48" d="M773.29,697.2v3.4c0,2.19-4.32,3.97-9.63,3.97c-5.32,0-9.63-1.78-9.63-3.97v-3.4"/>
-          <path class="st48" d="M755.72,702.85v-3.4"/>
-          <path class="st48" d="M757.99,703.8v-3.4"/>
-          <path class="st48" d="M760.25,704.3v-3.4"/>
-          <path class="st48" d="M762.52,704.54v-3.4"/>
-          <path class="st48" d="M764.79,704.54v-3.4"/>
-          <path class="st48" d="M767.05,704.3v-3.4"/>
-          <path class="st48" d="M769.32,703.8v-3.4"/>
-          <path class="st48" d="M771.59,702.85v-3.4"/>
-          <path class="st48" d="M768.75,706.87c2.72,0.7,4.53,1.95,4.53,3.37c0,0.84-0.63,1.61-1.7,2.26c-0.61,0.36-1.38,0.69-2.27,0.95
-            c-0.69,0.2-1.45,0.37-2.27,0.5c-0.14,0.02-0.26,0.05-0.39,0.06c0,0,0,0-0.01,0c-0.6,0.08-1.22,0.14-1.87,0.17
-            c-0.37,0.01-0.75,0.02-1.13,0.02c-0.39,0-0.76-0.01-1.13-0.02c-0.78-0.03-1.55-0.11-2.27-0.23c-0.82-0.12-1.58-0.29-2.27-0.5
-            c-0.7-0.22-1.35-0.46-1.88-0.75c-0.14-0.07-0.26-0.14-0.37-0.22c-1.07-0.65-1.7-1.42-1.7-2.26c0-0.01,0-0.02,0-0.03"/>
-          <path class="st48" d="M773.29,710.23v3.4c0,2.19-4.32,3.97-9.63,3.97c-5.32,0-9.63-1.78-9.63-3.97v-3.4"/>
-          <path class="st48" d="M755.72,715.89v-3.4"/>
-          <path class="st48" d="M757.99,716.84v-3.4"/>
-          <path class="st48" d="M760.25,717.34v-3.4"/>
-          <path class="st48" d="M762.52,717.58v-3.4"/>
-          <path class="st48" d="M764.79,717.58v-3.4"/>
-          <path class="st48" d="M767.05,717.34v-3.4"/>
-          <path class="st48" d="M769.32,716.84v-3.4"/>
-          <path class="st48" d="M771.59,715.89v-3.4"/>
-          <path class="st48" d="M754.02,700.06c-2.72,0.7-4.53,1.95-4.53,3.37c0,0.84,0.63,1.61,1.7,2.26c0.61,0.36,1.38,0.69,2.27,0.95
-            c0.69,0.2,1.45,0.37,2.27,0.5c0.45,0.08,0.93,0.12,1.42,0.17c0.28,0.02,0.57,0.05,0.85,0.06c0.37,0.01,0.75,0.02,1.13,0.02
-            s0.76-0.01,1.13-0.02c0.78-0.03,1.55-0.11,2.27-0.23c0.82-0.12,1.58-0.29,2.27-0.5c0.31-0.09,0.59-0.19,0.85-0.29
-            c0.53-0.2,1.01-0.43,1.42-0.67c0.83-0.5,1.39-1.07,1.61-1.69v-0.01"/>
-          <path class="st48" d="M766.68,700.96h-0.01"/>
-          <path class="st48" d="M749.49,703.43v3.4c0,0.84,0.63,1.61,1.7,2.26c0.61,0.36,1.38,0.69,2.27,0.95c0.18,0.06,0.37,0.1,0.57,0.16
-            c0.53,0.14,1.11,0.26,1.7,0.34c0.71,0.11,1.48,0.19,2.27,0.23c0.37,0.01,0.75,0.02,1.13,0.02s0.76-0.01,1.13-0.02
-            c0.78-0.03,1.55-0.11,2.27-0.23c0.82-0.12,1.58-0.29,2.27-0.5c0.88-0.26,1.65-0.59,2.27-0.95c1.07-0.63,1.68-1.39,1.7-2.22
-            c0-0.01,0-0.02,0-0.03v-2.87"/>
-          <path class="st48" d="M751.19,709.09v-3.4"/>
-          <path class="st48" d="M753.45,710.04v-3.4"/>
-          <path class="st48" d="M755.72,710.54v-3.4"/>
-          <path class="st48" d="M757.99,710.78v-3.4"/>
-          <path class="st48" d="M760.25,710.78v-3.4"/>
-          <path class="st48" d="M762.52,710.54v-3.4"/>
-          <path class="st48" d="M764.79,710.04v-3.4"/>
-          <path class="st48" d="M767.06,709.09v-3.4"/>
-          <path class="st48" d="M754.02,713.1c-2.72,0.7-4.53,1.95-4.53,3.37c0,0.84,0.63,1.61,1.7,2.26c0.61,0.36,1.38,0.69,2.27,0.95
-            c0.69,0.2,1.45,0.37,2.27,0.5c0.71,0.11,1.48,0.19,2.27,0.23c0.37,0.01,0.75,0.02,1.13,0.02s0.76-0.01,1.13-0.02
-            c0.78-0.03,1.55-0.11,2.27-0.23c0.82-0.12,1.58-0.29,2.27-0.5c0.88-0.26,1.65-0.59,2.27-0.95c0.83-0.5,1.39-1.07,1.61-1.69v-0.01
-            "/>
-          <path class="st48" d="M749.49,716.47v3.4c0,0.84,0.63,1.61,1.7,2.26c0.61,0.36,1.38,0.69,2.27,0.95c0.69,0.2,1.45,0.37,2.27,0.5
-            c0.71,0.11,1.48,0.19,2.27,0.23c0.37,0.01,0.75,0.02,1.13,0.02s0.76-0.01,1.13-0.02c0.78-0.03,1.55-0.11,2.27-0.23
-            c0.82-0.12,1.58-0.29,2.27-0.5c0.88-0.26,1.65-0.59,2.27-0.95c1.07-0.65,1.7-1.42,1.7-2.26V717"/>
-          <path class="st48" d="M751.19,722.12v-3.4"/>
-          <path class="st48" d="M753.45,723.07v-3.4"/>
-          <path class="st48" d="M755.72,723.57v-3.4"/>
-          <path class="st48" d="M757.99,723.81v-3.4"/>
-          <path class="st48" d="M760.25,723.81v-3.4"/>
-          <path class="st48" d="M762.52,723.57v-3.4"/>
-          <path class="st48" d="M764.79,723.07v-3.4"/>
-          <path class="st48" d="M767.06,722.12v-3.4"/>
-        </g>
-        <g id="pie_x5F_p3_x5F_number">
-          <circle class="st14" cx="761.17" cy="590.38" r="21"/>
-          <path class="st11" d="M762.45,589.83c1.12,0.18,1.97,0.6,2.57,1.26c0.59,0.64,0.89,1.44,0.89,2.4c0,0.74-0.19,1.43-0.58,2.06
-            c-0.39,0.62-0.98,1.12-1.78,1.49c-0.79,0.38-1.76,0.56-2.91,0.56c-0.9,0-1.78-0.12-2.66-0.35c-0.86-0.24-1.6-0.58-2.2-1.02
-            l1.15-2.26c0.49,0.36,1.04,0.65,1.67,0.86c0.64,0.19,1.3,0.29,1.97,0.29c0.74,0,1.32-0.14,1.75-0.42
-            c0.42-0.29,0.64-0.7,0.64-1.22c0-1.04-0.79-1.57-2.38-1.57h-1.35v-1.95l2.62-2.97h-5.42v-2.37h8.92v1.91L762.45,589.83z"/>
-        </g>
-        <foreignObject x="625" y="620" height="50" width="270">
-          <div class="pie__part-text" xmlns="http://www.w3.org/1999/xhtml">
-            Identifies your goals<br>and objectives
-          </div>
-        </foreignObject>
-      </g>
-      <g class="pie__part form-trigger" data-index="2" id="pie_x5F_p2">
-        <path class="st49" d="M919.36,499.86l-419.11-0.01l209.55-362.97c46.27,26.65,87.9,62.42,121.92,106.51
+        <path class="pie__part pie__part_shadow" data-index="2" style="fill:#D5D5D5" d="M919.36,499.86l-419.11-0.01l209.55-362.97c46.27,26.65,87.9,62.42,121.92,106.51
           c5.21,6.74,10.23,13.66,15.05,20.79c5.75,8.44,11.21,17.15,16.39,26.14c9.56,16.55,17.85,33.49,24.94,50.68
           c3.01,7.35,5.81,14.74,8.38,22.18C911.94,407.89,919.41,454.07,919.36,499.86z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_12_" filterUnits="userSpaceOnUse" x="500.22" y="137.01" width="306.47" height="362.87">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="500.22" y="137.01" width="306.47" height="362.87" id="SVGID_29_">
-          <g class="st50">
-            
-              <linearGradient id="SVGID_30_" gradientUnits="userSpaceOnUse" x1="13728.3232" y1="-2793.3274" x2="13850.8945" y2="-2793.3274" gradientTransform="matrix(-0.866 -0.5 0.5 -0.866 13978.8184 4855.502)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st51" d="M513.98,523.73l-13.77-23.85L709.7,137.04l0.08-0.03c6.87,3.98,13.63,8.15,20.25,12.51
-              c6.68,4.39,13.22,8.96,19.63,13.72c20.54,15.23,39.62,32.3,57.02,50.96L570.97,622.45l-43.21-74.87L513.98,523.73z"/>
-          </g>
-        </mask>
-        
-          <linearGradient id="SVGID_31_" gradientUnits="userSpaceOnUse" x1="13728.3252" y1="-2757.9417" x2="13850.8945" y2="-2757.9417" gradientTransform="matrix(-0.866 -0.5 0.5 -0.866 13978.8184 4855.502)">
-          <stop  offset="0" style="stop-color:#FFFFFF"/>
-          <stop  offset="1" style="stop-color:#000000"/>
-        </linearGradient>
-        <path class="st52" d="M500.22,499.88L709.7,137.04l0.08-0.03c6.87,3.98,13.63,8.15,20.25,12.51c6.68,4.39,13.22,8.96,19.63,13.72
-          c20.54,15.23,39.62,32.3,57.02,50.96l-164.89,285.6L500.22,499.88z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_13_" filterUnits="userSpaceOnUse" x="500.22" y="137.01" width="249.45" height="362.87">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="500.22" y="137.01" width="249.45" height="362.87" id="SVGID_32_">
-          <g class="st53">
-            
-              <linearGradient id="SVGID_33_" gradientUnits="userSpaceOnUse" x1="13803.1826" y1="-2771.7131" x2="13850.8945" y2="-2771.7131" gradientTransform="matrix(-0.866 -0.5 0.5 -0.866 13978.8184 4855.502)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st54" d="M500.22,499.88L709.7,137.04l0.08-0.03c6.87,3.98,13.63,8.15,20.25,12.51
-              c6.68,4.39,13.22,8.96,19.63,13.72l-221.9,384.35l-13.78-23.86L500.22,499.88z"/>
-          </g>
-        </mask>
-        <path class="st55" d="M500.22,499.88L709.7,137.04l0.08-0.03c6.87,3.98,13.63,8.15,20.25,12.51c6.68,4.39,13.22,8.96,19.63,13.72
-          L555.31,499.86L500.22,499.88z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_14_" filterUnits="userSpaceOnUse" x="500.22" y="137.01" width="229.82" height="362.87">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="500.22" y="137.01" width="229.82" height="362.87" id="SVGID_34_">
-          <g class="st56">
-            
-              <linearGradient id="SVGID_35_" gradientUnits="userSpaceOnUse" x1="13827.041" y1="-2764.8274" x2="13850.8945" y2="-2764.8274" gradientTransform="matrix(-0.866 -0.5 0.5 -0.866 13978.8184 4855.502)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st57" d="M513.98,523.73l-13.77-23.85L709.7,137.04l0.08-0.03c6.87,3.98,13.63,8.15,20.25,12.51L513.98,523.73z"/>
-          </g>
-        </mask>
-        <path class="st58" d="M500.22,499.88L709.7,137.04l0.08-0.03c6.87,3.98,13.63,8.15,20.25,12.51L527.8,499.8L500.22,499.88z"/>
-        <g id="pie_x5F_p2_x5F_icon">
-          <circle class="st11" cx="762.26" cy="422.66" r="21"/>
-          <path class="st59" d="M771.82,428.24c1.9,0,3.45-0.66,3.45-1.48s-1.54-1.48-3.45-1.48c-1.9,0-3.45,0.66-3.45,1.48
-            S769.92,428.24,771.82,428.24z"/>
-          <path class="st59" d="M771.82,428.24c1.9,0,3.45-0.66,3.45-1.48s-1.54-1.48-3.45-1.48c-1.9,0-3.45,0.66-3.45,1.48
-            S769.92,428.24,771.82,428.24z"/>
-          <path class="st59" d="M771.82,428.24c1.9,0,3.45-0.66,3.45-1.48s-1.54-1.48-3.45-1.48c-1.9,0-3.45,0.66-3.45,1.48
-            S769.92,428.24,771.82,428.24z"/>
-          <path class="st59" d="M768.38,428.73c0,0.82,1.55,1.48,3.45,1.48s3.45-0.66,3.45-1.48"/>
-          <path class="st59" d="M768.38,430.7c0,0.82,1.55,1.48,3.45,1.48s3.45-0.66,3.45-1.48"/>
-          <path class="st59" d="M768.38,432.67c0,0.82,1.55,1.48,3.45,1.48s3.45-0.66,3.45-1.48"/>
-          <path class="st59" d="M775.27,426.76v1.97v1.97v1.97v1.97c0,0.82-1.54,1.48-3.45,1.48s-3.45-0.66-3.45-1.48v-1.97v-1.97v-1.97
-            v-1.97"/>
-          <path class="st59" d="M764.93,432.18c1.9,0,3.45-0.66,3.45-1.48s-1.54-1.48-3.45-1.48c-1.9,0-3.45,0.66-3.45,1.48
-            S763.03,432.18,764.93,432.18z"/>
-          <path class="st59" d="M764.93,432.18c1.9,0,3.45-0.66,3.45-1.48s-1.54-1.48-3.45-1.48c-1.9,0-3.45,0.66-3.45,1.48
-            S763.03,432.18,764.93,432.18z"/>
-          <path class="st59" d="M764.93,432.18c1.9,0,3.45-0.66,3.45-1.48s-1.54-1.48-3.45-1.48c-1.9,0-3.45,0.66-3.45,1.48
-            S763.03,432.18,764.93,432.18z"/>
-          <path class="st59" d="M761.49,432.67c0,0.82,1.55,1.48,3.45,1.48s3.45-0.66,3.45-1.48"/>
-          <path class="st59" d="M761.49,430.7v1.97v1.97c0,0.82,1.54,1.48,3.45,1.48s3.45-0.66,3.45-1.48"/>
-          <path class="st60" d="M771.92,423.82c0.26-0.94,0.39-1.94,0.39-2.96c0-6.25-5.07-11.32-11.32-11.32
-            c-6.25,0-11.32,5.07-11.32,11.32c0,5.95,4.58,10.82,10.4,11.28"/>
-          <path class="st59" d="M760.99,414.95v5.91h3.94"/>
-          <path class="st59" d="M760.99,409.53V412"/>
-          <path class="st59" d="M755.33,411.05l0.74,1.28"/>
-          <path class="st59" d="M751.19,415.19l1.28,0.74"/>
-          <path class="st59" d="M751.19,426.52l1.28-0.74"/>
-          <path class="st59" d="M755.33,430.66l0.74-1.28"/>
-          <path class="st59" d="M770.8,415.19l-1.28,0.74"/>
-          <path class="st59" d="M766.65,411.05l-0.74,1.28"/>
-          <path class="st59" d="M749.67,420.85h2.46"/>
-          <path class="st59" d="M772.31,420.85h-2.46"/>
-        </g>
-        <g id="pie_x5F_p2_x5F_number">
-          <circle class="st14" cx="762.02" cy="307.02" r="21"/>
-          <path class="st11" d="M766.88,311.62v2.4h-9.63v-1.91l4.91-4.64c0.52-0.5,0.87-0.92,1.06-1.27c0.18-0.36,0.27-0.72,0.27-1.07
-            c0-0.51-0.18-0.9-0.53-1.16c-0.34-0.28-0.84-0.42-1.51-0.42c-0.56,0-1.06,0.11-1.51,0.33c-0.45,0.21-0.83,0.52-1.13,0.95
-            l-2.15-1.38c0.5-0.74,1.18-1.32,2.06-1.73c0.87-0.42,1.87-0.64,3-0.64c0.95,0,1.77,0.16,2.48,0.47c0.72,0.3,1.27,0.74,1.66,1.31
-            c0.4,0.56,0.6,1.22,0.6,1.98c0,0.69-0.15,1.34-0.44,1.95s-0.86,1.3-1.69,2.07l-2.93,2.77H766.88z"/>
-        </g>
-        <foreignObject x="625" y="338" height="50" width="270">
-          <div class="pie__part-text" xmlns="http://www.w3.org/1999/xhtml">
-            Monitors and reviews<br>your investments
-          </div>
-        </foreignObject>
-      </g>
-      <g class="pie__part form-trigger" data-index="1" id="pie_x5F_p1">
-        <path class="st61" d="M709.81,136.89L500.25,499.85L290.69,136.89c46.22-26.75,98-44.92,153.2-52.33
-          c4.42-0.6,8.88-1.13,13.36-1.58c14.14-1.45,28.49-2.18,43.01-2.18c19.11,0,37.94,1.27,56.36,3.76c4.56,0.6,9.09,1.29,13.6,2.05
+        <path class="pie__part pie__part_shadow" data-index="1" style="fill:#D5D5D5" d="M709.81,136.89L500.25,499.85L290.69,136.89c46.22-26.75,98-44.92,153.2-52.33c4.42-0.6,8.88-1.13,13.36-1.58
+          c14.14-1.45,28.49-2.18,43.01-2.18c19.11,0,37.94,1.27,56.36,3.76c4.56,0.6,9.09,1.29,13.6,2.05
           C620.31,95.04,667.41,112.35,709.81,136.89z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_15_" filterUnits="userSpaceOnUse" x="290.78" y="91.64" width="280.23" height="408.25">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="290.78" y="91.64" width="280.23" height="408.25" id="SVGID_36_">
-          <g class="st62">
-            
-              <linearGradient id="SVGID_37_" gradientUnits="userSpaceOnUse" x1="13867.1826" y1="4454.4038" x2="13989.752" y2="4454.4038" gradientTransform="matrix(-0.866 0.5 -0.5 -0.866 14755.5225 -2788.2725)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st63" d="M527.8,499.89l-27.54,0L290.78,137.05l0.02-0.09c6.88-3.96,13.87-7.72,20.96-11.28
-              c7.14-3.59,14.37-6.97,21.69-10.14c23.46-10.17,47.78-18.16,72.64-23.9L641.79,499.9l-86.44-0.01L527.8,499.89z"/>
-          </g>
-        </mask>
-        
-          <linearGradient id="SVGID_38_" gradientUnits="userSpaceOnUse" x1="13867.1826" y1="4489.7915" x2="13989.752" y2="4489.7915" gradientTransform="matrix(-0.866 0.5 -0.5 -0.866 14755.5225 -2788.2725)">
-          <stop  offset="0" style="stop-color:#FFFFFF"/>
-          <stop  offset="1" style="stop-color:#000000"/>
-        </linearGradient>
-        <path class="st64" d="M500.26,499.89L290.78,137.05l0.02-0.09c6.88-3.96,13.87-7.72,20.96-11.28c7.14-3.59,14.37-6.97,21.69-10.14
-          c23.46-10.17,47.78-18.16,72.64-23.9L571,377.3L500.26,499.89z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_16_" filterUnits="userSpaceOnUse" x="290.78" y="115.54" width="237.06" height="384.35">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="290.78" y="115.54" width="237.06" height="384.35" id="SVGID_39_">
-          <g class="st65">
-            
-              <linearGradient id="SVGID_40_" gradientUnits="userSpaceOnUse" x1="13942.041" y1="4476.019" x2="13989.752" y2="4476.019" gradientTransform="matrix(-0.866 0.5 -0.5 -0.866 14755.5225 -2788.2725)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st66" d="M500.26,499.89L290.78,137.05l0.02-0.09c6.88-3.96,13.87-7.72,20.96-11.28
-              c7.14-3.59,14.37-6.97,21.69-10.14l221.9,384.35l-27.55,0L500.26,499.89z"/>
-          </g>
-        </mask>
-        <path class="st67" d="M500.26,499.89L290.78,137.05l0.02-0.09c6.88-3.96,13.87-7.72,20.96-11.28c7.14-3.59,14.37-6.97,21.69-10.14
-          l194.39,336.7L500.26,499.89z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_17_" filterUnits="userSpaceOnUse" x="290.78" y="125.68" width="223.22" height="374.21">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="290.78" y="125.68" width="223.22" height="374.21" id="SVGID_41_">
-          <g class="st68">
-            
-              <linearGradient id="SVGID_42_" gradientUnits="userSpaceOnUse" x1="13965.8984" y1="4482.9053" x2="13989.752" y2="4482.9053" gradientTransform="matrix(-0.866 0.5 -0.5 -0.866 14755.5225 -2788.2725)">
-              <stop  offset="0" style="stop-color:#000000"/>
-              <stop  offset="0.1691" style="stop-color:#030303"/>
-              <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
-              <stop  offset="0.53" style="stop-color:#353535"/>
-              <stop  offset="0.6359" style="stop-color:#535353"/>
-              <stop  offset="0.7379" style="stop-color:#787878"/>
-              <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
-              <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
-              <stop  offset="1" style="stop-color:#FFFFFF"/>
-            </linearGradient>
-            <path class="st69" d="M527.8,499.89l-27.54,0L290.78,137.05l0.02-0.09c6.88-3.96,13.87-7.72,20.96-11.28L527.8,499.89z"/>
-          </g>
-        </mask>
-        <path class="st70" d="M514,476l-13.74,23.89L290.78,137.05l0.02-0.09c6.88-3.96,13.87-7.72,20.96-11.28L514,476z"/>
-        <g id="pie_x5F_p1_x5F_icon">
-          <circle class="st11" cx="500.13" cy="258.13" r="21"/>
-          <g>
-            <defs>
-              <rect id="SVGID_43_" x="485.69" y="247.63" width="29.4" height="21"/>
-            </defs>
-            <clipPath id="SVGID_44_">
-              <use xlink:href="#SVGID_43_"  style="overflow:visible;"/>
-            </clipPath>
-            <g class="st71">
-              <path class="st72" d="M501.97,266l1.57-0.52h7.88l-0.19,0.93c-0.2,0.98-1.06,1.69-2.06,1.69h-20.71c-1,0-1.86-0.7-2.06-1.69
-                l-0.19-0.93h7.88l1.57,0.52H501.97z"/>
-              <path class="st73" d="M488.32,265.48v-14.7h11.03"/>
-              <path class="st73" d="M509.32,265.48v-6.3"/>
-              <path class="st72" d="M500.92,256.03c0,0.87,0.7,1.58,1.57,1.58h10.5c0.87,0,1.57-0.7,1.57-1.58v-6.3
-                c0-0.87-0.7-1.57-1.57-1.57h-10.5c-0.87,0-1.57,0.7-1.57,1.57V256.03z"/>
-              <path class="st72" d="M514.57,250.78h-13.65"/>
-              <path class="st72" d="M514.57,252.88h-13.65"/>
-              <path class="st72" d="M503.02,254.98h3.15"/>
-            </g>
-          </g>
-        </g>
-        <g id="pie_x5F_p1_x5F_number">
-          <path class="st11" d="M502.13,138.91v12.74h-2.95v-10.37h-2.55v-2.37H502.13z"/>
-          <circle class="st14" cx="500.07" cy="144.65" r="21"/>
-        </g>
-        <foreignObject x="325" y="176" height="50" width="350">
-          <div class="pie__part-text" xmlns="http://www.w3.org/1999/xhtml">
-            Clarifies your current<br>financial situation
-          </div>
-        </foreignObject>
       </g>
-      <g id="pie_x5F_center">
-        <g>
-          <g>
-            <path class="st74" d="M683.75,499.48c0,101.03-81.9,182.93-182.93,182.93c-101.03,0-182.93-81.9-182.93-182.93
-              c0-101.03,81.9-182.92,182.93-182.92C601.84,316.56,683.75,398.45,683.75,499.48z"/>
+      <g id="pie">
+        <g class="pie__part form-trigger" data-index="6" id="pie_x5F_p6">
+          <path class="st1" d="M500.25,499.85l-419.11,0.01c-0.05-51.18,9.27-102.86,28.69-152.43c0.85-2.14,1.7-4.29,2.57-6.43
+            c7.08-17.19,15.38-34.12,24.93-50.68c8.42-14.58,17.57-28.46,27.41-41.62c1.32-1.78,2.67-3.55,4.03-5.3
+            c34.01-44.1,75.65-79.86,121.92-106.51L500.25,499.85z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter" filterUnits="userSpaceOnUse" x="81.26" y="377.29" width="419.04" height="122.56">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="81.26" y="377.29" width="419.04" height="122.56" id="SVGID_1_">
+            <g class="st2">
+              
+                <linearGradient id="SVGID_2_" gradientUnits="userSpaceOnUse" x1="7660.2979" y1="8197.8105" x2="7782.8599" y2="8197.8105" gradientTransform="matrix(0 1 -1 0 8523.9727 -7283.0044)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st3" d="M514.07,476.01l-13.77,23.85H81.32l-0.07-0.06c0.01-7.94,0.25-15.88,0.7-23.79
+                c0.46-7.98,1.15-15.93,2.07-23.86c2.92-25.4,8.16-50.46,15.62-74.86h471.42l-43.23,74.86L514.07,476.01z"/>
+            </g>
+          </mask>
+          
+            <linearGradient id="SVGID_3_" gradientUnits="userSpaceOnUse" x1="7660.2979" y1="8233.1963" x2="7782.8599" y2="8233.1963" gradientTransform="matrix(0 1 -1 0 8523.9727 -7283.0044)">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#000000"/>
+          </linearGradient>
+          <path class="st4" d="M500.29,499.86H81.32l-0.07-0.06c0.01-7.94,0.25-15.88,0.7-23.79c0.46-7.98,1.15-15.93,2.07-23.86
+            c2.92-25.4,8.16-50.46,15.62-74.86h329.83L500.29,499.86z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_1_" filterUnits="userSpaceOnUse" x="81.26" y="452.15" width="419.04" height="47.7">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="81.26" y="452.15" width="419.04" height="47.7" id="SVGID_4_">
+            <g class="st5">
+              
+                <linearGradient id="SVGID_5_" gradientUnits="userSpaceOnUse" x1="7735.1548" y1="8219.4248" x2="7782.8599" y2="8219.4248" gradientTransform="matrix(0 1 -1 0 8523.9727 -7283.0044)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st6" d="M500.29,499.86H81.32l-0.07-0.06c0.01-7.94,0.25-15.88,0.7-23.79c0.46-7.98,1.15-15.93,2.07-23.86h443.81
+                l-13.77,23.86L500.29,499.86z"/>
+            </g>
+          </mask>
+          <path class="st7" d="M500.29,499.86H81.32l-0.07-0.06c0.01-7.94,0.25-15.88,0.7-23.79c0.46-7.98,1.15-15.93,2.07-23.86H472.7
+            L500.29,499.86z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_2_" filterUnits="userSpaceOnUse" x="81.26" y="476.01" width="419.04" height="23.85">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="81.26" y="476.01" width="419.04" height="23.85" id="SVGID_6_">
+            <g class="st8">
+              
+                <linearGradient id="SVGID_7_" gradientUnits="userSpaceOnUse" x1="7759.0122" y1="8226.3105" x2="7782.8599" y2="8226.3105" gradientTransform="matrix(0 1 -1 0 8523.9727 -7283.0044)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st9" d="M514.07,476.01l-13.77,23.85H81.32l-0.07-0.06c0.01-7.94,0.25-15.88,0.7-23.79H514.07z"/>
+            </g>
+          </mask>
+          <path class="st10" d="M500.29,499.86H81.32l-0.07-0.06c0.01-7.94,0.25-15.88,0.7-23.79h404.51L500.29,499.86z"/>
+          <g id="pie_x5F_p6_x5F_icon">
+            <circle class="st11" cx="230.45" cy="421.17" r="21"/>
+            <path class="st12" d="M237.29,433.36c-0.93-0.93-1.71-2.01-2.28-3.2l-0.07-0.13l-2.63-4.27c-0.11-0.18-0.18-0.39-0.18-0.62
+              c0-0.65,0.52-1.17,1.17-1.17c0.39,0,0.75,0.2,0.96,0.51l1.62,2.32v-0.16v-8.98c0-0.65,0.52-1.17,1.17-1.17
+              c0.65,0,1.17,0.52,1.17,1.17v4.69c0-0.65,0.52-1.17,1.17-1.17c0.65,0,1.17,0.52,1.17,1.17v0.47c0-0.65,0.52-1.17,1.17-1.17
+              c0.65,0,1.17,0.52,1.17,1.17v0.47c0-0.65,0.53-1.17,1.17-1.17s1.17,0.52,1.17,1.17v6.96l-0.94,3.12"/>
+            <path class="st12" d="M235.88,426.8v0.94"/>
+            <path class="st12" d="M232.13,416.48h-3.75v2.81h3.75V416.48z"/>
+            <path class="st12" d="M226.04,416.48h-3.75v2.81h3.75V416.48z"/>
+            <path class="st13" d="M234.95,419.3h-0.94v-2.81h1.17"/>
+            <path class="st12" d="M238.23,410.39h-15.94v3.75h15.94V410.39z"/>
+            <path class="st13" d="M234.01,431.01h-14.06v-22.97h20.63v12.21"/>
+            <path class="st13" d="M231.2,423.98h-2.81v-2.81h3.75v1.88"/>
+            <path class="st12" d="M226.04,421.17h-3.75v2.81h3.75V421.17z"/>
+            <path class="st13" d="M231.2,425.86h-2.81v2.81h3.75v-0.94"/>
+            <path class="st12" d="M226.04,425.86h-3.75v2.81h3.75V425.86z"/>
           </g>
-        </g>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_18_" filterUnits="userSpaceOnUse" x="319.96" y="323.1" width="98.7" height="98.7">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="319.96" y="323.1" width="98.7" height="98.7" id="SVGID_45_">
-          <g class="st75">
-            <radialGradient id="SVGID_46_" cx="366.024" cy="372.4563" r="44.4173" gradientUnits="userSpaceOnUse">
-              <stop  offset="0" style="stop-color:#FFFFFF"/>
-              <stop  offset="0.0643" style="stop-color:#D9D9D9"/>
-              <stop  offset="0.1609" style="stop-color:#A7A7A7"/>
-              <stop  offset="0.2621" style="stop-color:#7A7A7A"/>
-              <stop  offset="0.3663" style="stop-color:#545454"/>
-              <stop  offset="0.474" style="stop-color:#363636"/>
-              <stop  offset="0.5865" style="stop-color:#1E1E1E"/>
-              <stop  offset="0.7057" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.8363" style="stop-color:#030303"/>
-              <stop  offset="1" style="stop-color:#000000"/>
-            </radialGradient>
-            <path class="st76" d="M410.44,372.45c0,24.53-19.88,44.42-44.41,44.42c-24.53,0-44.42-19.89-44.42-44.42
-              c0-24.52,19.89-44.41,44.42-44.41C390.56,328.04,410.44,347.93,410.44,372.45z"/>
-          </g>
-        </mask>
-        <path class="st77" d="M418.67,372.45c0,27.26-22.08,49.35-49.34,49.35c-27.26,0-49.36-22.09-49.36-49.35
-          c0-27.25,22.1-49.35,49.36-49.35C396.59,323.1,418.67,345.2,418.67,372.45z"/>
-        <defs>
-          <filter id="Adobe_OpacityMaskFilter_19_" filterUnits="userSpaceOnUse" x="353.97" y="357.11" width="30.69" height="30.69">
-            <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
-          </filter>
-        </defs>
-        <mask maskUnits="userSpaceOnUse" x="353.97" y="357.11" width="30.69" height="30.69" id="SVGID_47_">
-          <g class="st78">
-            <radialGradient id="SVGID_48_" cx="368.2917" cy="372.4526" r="13.8094" gradientUnits="userSpaceOnUse">
-              <stop  offset="0" style="stop-color:#FFFFFF"/>
-              <stop  offset="0.0643" style="stop-color:#D9D9D9"/>
-              <stop  offset="0.1609" style="stop-color:#A7A7A7"/>
-              <stop  offset="0.2621" style="stop-color:#7A7A7A"/>
-              <stop  offset="0.3663" style="stop-color:#545454"/>
-              <stop  offset="0.474" style="stop-color:#363636"/>
-              <stop  offset="0.5865" style="stop-color:#1E1E1E"/>
-              <stop  offset="0.7057" style="stop-color:#0D0D0D"/>
-              <stop  offset="0.8363" style="stop-color:#030303"/>
-              <stop  offset="1" style="stop-color:#000000"/>
-            </radialGradient>
-            <path class="st79" d="M382.1,372.45c0,7.63-6.18,13.81-13.81,13.81c-7.63,0-13.81-6.19-13.81-13.81
-              c0-7.62,6.18-13.81,13.81-13.81C375.92,358.64,382.1,364.83,382.1,372.45z"/>
-          </g>
-        </mask>
-        <path class="st80" d="M384.66,372.45c0,8.48-6.86,15.34-15.34,15.34c-8.47,0-15.35-6.87-15.35-15.34
-          c0-8.47,6.87-15.34,15.35-15.34C377.79,357.11,384.66,363.98,384.66,372.45z"/>
-        <path class="st81" d="M500.82,683.23c101.33,0,183.75-82.44,183.75-183.75c0-101.32-82.42-183.75-183.75-183.75
-          c-101.32,0-183.75,82.44-183.75,183.75C317.07,600.8,399.51,683.23,500.82,683.23z M500.82,316.55
-          c101.04,0,182.93,81.9,182.93,182.93c0,101.04-81.9,182.93-182.93,182.93c-101.02,0-182.93-81.9-182.93-182.93
-          C317.89,398.45,399.8,316.55,500.82,316.55z"/>
-        <g>
-          <g>
-            <linearGradient id="SVGID_49_" gradientUnits="userSpaceOnUse" x1="389.7275" y1="388.3912" x2="611.9074" y2="610.5711">
-              <stop  offset="0" style="stop-color:#FFFFFF"/>
-              <stop  offset="0.5571" style="stop-color:#E3E3E3"/>
-              <stop  offset="1" style="stop-color:#D1D1D1"/>
-            </linearGradient>
-            <path class="st82" d="M657.92,499.48c0,86.77-70.34,157.11-157.11,157.11c-86.76,0-157.1-70.34-157.1-157.11
-              c0-86.76,70.34-157.1,157.1-157.1C587.58,342.38,657.92,412.72,657.92,499.48z"/>
-          </g>
-        </g>
-        <linearGradient id="SVGID_50_" gradientUnits="userSpaceOnUse" x1="391.0333" y1="389.7083" x2="610.5784" y2="609.2534">
-          <stop  offset="0" style="stop-color:#E5E5E5"/>
-          <stop  offset="0.0786" style="stop-color:#E8E8E8"/>
-          <stop  offset="0.6051" style="stop-color:#F9F9F9"/>
-          <stop  offset="1" style="stop-color:#FFFFFF"/>
-        </linearGradient>
-        <path class="st83" d="M656.05,499.48c0,85.74-69.5,155.25-155.25,155.25c-85.73,0-155.24-69.51-155.24-155.25
-          c0-85.73,69.51-155.24,155.24-155.24C586.54,344.24,656.05,413.74,656.05,499.48z"/>
-          <foreignObject x="350" y="404" height="205" width="290">
-            <div class="pie__mid-text" xmlns="http://www.w3.org/1999/xhtml">
-              Here's why you need a Personal Financial Planner
+          <g id="pie_x5F_p6_x5F_number">
+            <circle class="st14" cx="230.4" cy="308.89" r="21"/>
+            <path class="st11" d="M232.15,307.9c0.81,0,1.55,0.16,2.22,0.49c0.67,0.33,1.2,0.79,1.58,1.4c0.39,0.59,0.58,1.29,0.58,2.07
+              c0,0.85-0.21,1.6-0.64,2.24c-0.42,0.64-1.01,1.14-1.75,1.49c-0.73,0.34-1.54,0.51-2.44,0.51c-1.78,0-3.18-0.55-4.19-1.64
+              c-1.01-1.09-1.51-2.65-1.51-4.68c0-1.44,0.27-2.68,0.82-3.71c0.55-1.03,1.3-1.81,2.27-2.35c0.98-0.53,2.12-0.8,3.4-0.8
+              c0.68,0,1.33,0.08,1.95,0.24c0.63,0.15,1.16,0.36,1.6,0.64l-1.09,2.17c-0.63-0.42-1.43-0.64-2.38-0.64
+              c-1.08,0-1.94,0.32-2.57,0.95c-0.63,0.63-0.97,1.55-1.02,2.75C229.76,308.28,230.81,307.9,232.15,307.9z M231.55,313.91
+              c0.63,0,1.14-0.17,1.53-0.51c0.4-0.34,0.6-0.8,0.6-1.38s-0.2-1.04-0.6-1.38c-0.39-0.35-0.91-0.53-1.57-0.53
+              c-0.64,0-1.17,0.18-1.58,0.55c-0.41,0.35-0.62,0.81-0.62,1.37c0,0.56,0.2,1.01,0.6,1.36
+              C230.32,313.73,230.86,313.91,231.55,313.91z"/>
+          </g>      
+          <foreignObject x="108" y="341" height="50" width="270">
+            <div class="pie__part-text" xmlns="http://www.w3.org/1999/xhtml">
+              Implements the best<br>strategy for you
             </div>
           </foreignObject>
+        </g>
+        <g class="pie__part form-trigger" data-index="5" id="pie_x5F_p5">
+          <path class="st15" d="M500.25,499.85L290.7,862.81c-39.16-22.56-75-51.63-105.7-86.77c-5.6-6.38-11-12.96-16.22-19.74
+            c-11.37-14.72-21.88-30.38-31.44-46.93c-5.28-9.14-10.17-18.39-14.69-27.75c-3.66-7.58-7.07-15.23-10.24-22.92
+            c-21.17-51.52-31.32-105.46-31.27-158.86L500.25,499.85z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_3_" filterUnits="userSpaceOnUse" x="193.81" y="499.81" width="306.47" height="362.87">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="193.81" y="499.81" width="306.47" height="362.87" id="SVGID_8_">
+            <g class="st16">
+              
+                <linearGradient id="SVGID_9_" gradientUnits="userSpaceOnUse" x1="1315.0135" y1="4694.9023" x2="1437.5842" y2="4694.9023" gradientTransform="matrix(0.866 0.5 -0.5 0.866 1515.7181 -4133.9619)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st17" d="M486.51,475.96l13.77,23.85L290.79,862.65l-0.08,0.03c-6.87-3.98-13.63-8.15-20.25-12.51
+                c-6.68-4.39-13.22-8.96-19.63-13.72c-20.54-15.23-39.62-32.3-57.02-50.95l235.71-408.26l43.21,74.87L486.51,475.96z"/>
+            </g>
+          </mask>
+          
+            <linearGradient id="SVGID_10_" gradientUnits="userSpaceOnUse" x1="1315.0154" y1="4730.2881" x2="1437.5842" y2="4730.2881" gradientTransform="matrix(0.866 0.5 -0.5 0.866 1515.7181 -4133.9619)">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#000000"/>
+          </linearGradient>
+          <path class="st18" d="M500.28,499.81L290.79,862.65l-0.08,0.03c-6.87-3.98-13.63-8.15-20.25-12.51
+            c-6.68-4.39-13.22-8.96-19.63-13.72c-20.54-15.23-39.62-32.3-57.02-50.95L358.65,500L500.28,499.81z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_4_" filterUnits="userSpaceOnUse" x="250.83" y="499.81" width="249.45" height="362.87">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="250.83" y="499.81" width="249.45" height="362.87" id="SVGID_11_">
+            <g class="st19">
+              
+                <linearGradient id="SVGID_12_" gradientUnits="userSpaceOnUse" x1="1389.8728" y1="4716.5166" x2="1437.5842" y2="4716.5166" gradientTransform="matrix(0.866 0.5 -0.5 0.866 1515.7181 -4133.9619)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st20" d="M500.28,499.81L290.79,862.65l-0.08,0.03c-6.87-3.98-13.63-8.15-20.25-12.51
+                c-6.68-4.39-13.22-8.96-19.63-13.72l221.9-384.35l13.78,23.86L500.28,499.81z"/>
+            </g>
+          </mask>
+          <path class="st21" d="M500.28,499.81L290.79,862.65l-0.08,0.03c-6.87-3.98-13.63-8.15-20.25-12.51
+            c-6.68-4.39-13.22-8.96-19.63-13.72L445.08,500L500.28,499.81z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_5_" filterUnits="userSpaceOnUse" x="270.46" y="499.81" width="229.82" height="362.87">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="270.46" y="499.81" width="229.82" height="362.87" id="SVGID_13_">
+            <g class="st22">
+              
+                <linearGradient id="SVGID_14_" gradientUnits="userSpaceOnUse" x1="1413.7306" y1="4723.4023" x2="1437.5842" y2="4723.4023" gradientTransform="matrix(0.866 0.5 -0.5 0.866 1515.7181 -4133.9619)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st23" d="M486.51,475.96l13.77,23.85L290.79,862.65l-0.08,0.03c-6.87-3.98-13.63-8.15-20.25-12.51L486.51,475.96z"
+                />
+            </g>
+          </mask>
+          <path class="st24" d="M500.28,499.81L290.79,862.65l-0.08,0.03c-6.87-3.98-13.63-8.15-20.25-12.51L472.63,500L500.28,499.81z"/>
+          <g id="pie_x5F_p5_x5F_icon">
+            <circle class="st11" cx="232.55" cy="686.62" r="21"/>
+            <path class="st25" d="M220.27,680.43h-2.16v15.09c0,1.19,0.97,2.16,2.16,2.16c1.19,0,2.16-0.97,2.16-2.16v-19.41h24.8v19.41
+              c0,1.19-0.97,2.16-2.16,2.16h-24.8"/>
+            <path class="st25" d="M225.12,679.35h19.41"/>
+            <path class="st25" d="M229.44,682.05h-4.31v4.31h4.31V682.05z"/>
+            <path class="st25" d="M244.53,682.05h-12.4v4.31h12.4V682.05z"/>
+            <path class="st25" d="M229.44,689.05h-4.31"/>
+            <path class="st25" d="M244.53,689.05h-12.4"/>
+            <path class="st25" d="M229.44,691.75h-4.31"/>
+            <path class="st25" d="M244.53,691.75h-12.4"/>
+            <path class="st25" d="M229.44,694.45h-4.31"/>
+            <path class="st25" d="M244.53,694.45h-12.4"/>
+          </g>
+          <g id="pie_x5F_p5_x5F_number">
+            <circle class="st14" cx="232.96" cy="576.38" r="21"/>
+            <path class="st11" d="M232.62,575.43c1.8,0,3.12,0.36,3.97,1.07c0.86,0.72,1.29,1.67,1.29,2.88c0,0.78-0.19,1.49-0.58,2.13
+              c-0.39,0.63-0.98,1.14-1.78,1.53c-0.79,0.38-1.77,0.56-2.93,0.56c-0.9,0-1.78-0.12-2.66-0.35c-0.86-0.24-1.6-0.58-2.2-1.02
+              l1.16-2.26c0.49,0.36,1.04,0.65,1.67,0.86c0.63,0.19,1.28,0.29,1.95,0.29c0.74,0,1.32-0.15,1.75-0.44
+              c0.42-0.29,0.64-0.7,0.64-1.22c0-0.55-0.22-0.96-0.67-1.24c-0.44-0.28-1.2-0.42-2.29-0.42h-3.26l0.66-7.17h7.77v2.37h-5.31
+              l-0.2,2.42H232.62z"/>
+          </g>
+          <foreignObject x="97" y="605" height="50" width="270">
+            <div class="pie__part-text" xmlns="http://www.w3.org/1999/xhtml">
+              Creates a<br>Financial Plan
+            </div>
+          </foreignObject>
+        </g>
+        <g class="pie__part form-trigger" data-index="4" id="pie_x5F_p4">
+          <path class="st26" d="M709.81,862.8c-42.53,24.62-89.8,41.96-140.09,50.36c-4.35,0.74-8.73,1.38-13.11,1.97
+            c-18.43,2.49-37.25,3.76-56.36,3.76c-11.63,0-23.14-0.48-34.54-1.4c-7.33-0.6-14.61-1.38-21.82-2.36
+            c-55.2-7.41-106.98-25.58-153.2-52.33l209.56-362.95L709.81,862.8z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_6_" filterUnits="userSpaceOnUse" x="429.49" y="499.8" width="280.22" height="408.25">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="429.49" y="499.8" width="280.22" height="408.25" id="SVGID_15_">
+            <g class="st27">
+              
+                <linearGradient id="SVGID_16_" gradientUnits="userSpaceOnUse" x1="1175.7083" y1="-2552.0452" x2="1298.278" y2="-2552.0452" gradientTransform="matrix(0.866 -0.5 0.5 0.866 739.0141 3509.8125)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st28" d="M472.69,499.8l27.54,0l209.49,362.84l-0.02,0.09c-6.88,3.96-13.87,7.72-20.96,11.28
+                c-7.14,3.59-14.37,6.97-21.69,10.14c-23.46,10.17-47.78,18.16-72.64,23.9L358.7,499.79l86.44,0.01L472.69,499.8z"/>
+            </g>
+          </mask>
+          
+            <linearGradient id="SVGID_17_" gradientUnits="userSpaceOnUse" x1="1175.7083" y1="-2516.658" x2="1298.278" y2="-2516.658" gradientTransform="matrix(0.866 -0.5 0.5 0.866 739.0141 3509.8125)">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#000000"/>
+          </linearGradient>
+          <path class="st29" d="M500.23,499.8l209.49,362.84l-0.02,0.09c-6.88,3.96-13.87,7.72-20.96,11.28
+            c-7.14,3.59-14.37,6.97-21.69,10.14c-23.46,10.17-47.78,18.16-72.64,23.9L429.49,622.4L500.23,499.8z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_7_" filterUnits="userSpaceOnUse" x="472.71" y="499.8" width="237" height="384.35">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="472.71" y="499.8" width="237" height="384.35" id="SVGID_18_">
+            <g class="st30">
+              
+                <linearGradient id="SVGID_19_" gradientUnits="userSpaceOnUse" x1="1250.5668" y1="-2530.4299" x2="1298.278" y2="-2530.4299" gradientTransform="matrix(0.866 -0.5 0.5 0.866 739.0141 3509.8125)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st31" d="M500.23,499.8l209.49,362.84l-0.02,0.09c-6.88,3.96-13.87,7.72-20.96,11.28
+                c-7.14,3.59-14.37,6.97-21.69,10.14L445.15,499.8l27.55,0L500.23,499.8z"/>
+            </g>
+          </mask>
+          <path class="st32" d="M500.23,499.8l209.49,362.84l-0.02,0.09c-6.88,3.96-13.87,7.72-20.96,11.28
+            c-7.14,3.59-14.37,6.97-21.69,10.14l-194.34-336.6L500.23,499.8z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_8_" filterUnits="userSpaceOnUse" x="486.48" y="499.8" width="223.23" height="374.21">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="486.48" y="499.8" width="223.23" height="374.21" id="SVGID_20_">
+            <g class="st33">
+              
+                <linearGradient id="SVGID_21_" gradientUnits="userSpaceOnUse" x1="1274.4244" y1="-2523.5439" x2="1298.278" y2="-2523.5439" gradientTransform="matrix(0.866 -0.5 0.5 0.866 739.0141 3509.8125)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st34" d="M472.69,499.8l27.54,0l209.49,362.84l-0.02,0.09c-6.88,3.96-13.87,7.72-20.96,11.28L472.69,499.8z"/>
+            </g>
+          </mask>
+          <path class="st35" d="M500.23,499.8l209.49,362.84l-0.02,0.09c-6.88,3.96-13.87,7.72-20.96,11.28L486.48,523.68L500.23,499.8z"/>
+          <g id="pie_x5F_p4_x5F_icon">
+            <circle class="st11" cx="498.96" cy="857.53" r="21"/>
+            <path class="st36" d="M508.29,862.69c1.99,0,3.61-0.69,3.61-1.55s-1.62-1.55-3.61-1.55c-1.99,0-3.61,0.69-3.61,1.55
+              S506.29,862.69,508.29,862.69z"/>
+            <path class="st36" d="M508.29,862.69c1.99,0,3.61-0.69,3.61-1.55s-1.62-1.55-3.61-1.55c-1.99,0-3.61,0.69-3.61,1.55
+              S506.29,862.69,508.29,862.69z"/>
+            <path class="st36" d="M508.29,862.69c1.99,0,3.61-0.69,3.61-1.55s-1.62-1.55-3.61-1.55c-1.99,0-3.61,0.69-3.61,1.55
+              S506.29,862.69,508.29,862.69z"/>
+            <path class="st36" d="M504.68,863.2c0,0.86,1.62,1.55,3.61,1.55c1.99,0,3.61-0.69,3.61-1.55"/>
+            <path class="st36" d="M504.68,865.27c0,0.86,1.62,1.55,3.61,1.55c1.99,0,3.61-0.69,3.61-1.55"/>
+            <path class="st36" d="M504.68,867.33c0,0.86,1.62,1.55,3.61,1.55c1.99,0,3.61-0.69,3.61-1.55"/>
+            <path class="st36" d="M511.9,861.14v2.06v2.06v2.06v2.06c0,0.86-1.61,1.55-3.61,1.55s-3.61-0.69-3.61-1.55v-2.06v-2.06v-2.06
+              v-2.06"/>
+            <path class="st36" d="M501.07,866.81c1.99,0,3.61-0.69,3.61-1.55s-1.62-1.55-3.61-1.55c-1.99,0-3.61,0.69-3.61,1.55
+              S499.07,866.81,501.07,866.81z"/>
+            <path class="st36" d="M501.07,866.81c1.99,0,3.61-0.69,3.61-1.55s-1.62-1.55-3.61-1.55c-1.99,0-3.61,0.69-3.61,1.55
+              S499.07,866.81,501.07,866.81z"/>
+            <path class="st36" d="M501.07,866.81c1.99,0,3.61-0.69,3.61-1.55s-1.62-1.55-3.61-1.55c-1.99,0-3.61,0.69-3.61,1.55
+              S499.07,866.81,501.07,866.81z"/>
+            <path class="st36" d="M497.46,867.33c0,0.86,1.62,1.55,3.61,1.55c1.99,0,3.61-0.69,3.61-1.55"/>
+            <path class="st36" d="M497.46,865.27v2.06v2.06c0,0.86,1.61,1.55,3.61,1.55s3.61-0.69,3.61-1.55"/>
+            <path class="st37" d="M495.91,867.84h-8.77v-19.59"/>
+            <path class="st37" d="M492.3,843.09h12.38v15.98"/>
+            <path class="st36" d="M492.3,848.25h-5.16l5.16-5.16V848.25z"/>
+            <path class="st36" d="M492.3,860.63v-4.13h-2.06v4.13"/>
+            <path class="st36" d="M496.94,860.63v-6.19h-2.06v6.19"/>
+            <path class="st36" d="M501.58,860.63v-7.22h-2.06v7.22"/>
+            <path class="st36" d="M490.24,863.2h5.16"/>
+            <path class="st36" d="M490.24,865.27h3.09"/>
+            <path class="st36" d="M490.24,853.41l11.34-6.7"/>
+            <path class="st36" d="M498.49,846.7h3.09l-1.55,2.58"/>
+          </g>
+          <g id="pie_x5F_p4_x5F_number">
+            <path class="st11" d="M506.61,749.05h-2.07v2.68h-2.88v-2.68h-6.86v-1.98l6.01-8.08h3.09l-5.57,7.66h3.42v-2.38h2.78v2.38h2.07
+              V749.05z"/>
+            <circle class="st14" cx="499.81" cy="744.72" r="21"/>
+          </g>
+          <foreignObject x="325" y="773" height="50" width="350">
+            <div class="pie__part-text" xmlns="http://www.w3.org/1999/xhtml">
+              Assesses your<br>risk profile
+            </div>
+          </foreignObject>
+        </g>
+        <g class="pie__part form-trigger" data-index="3" id="pie_x5F_p3">
+          <path class="st38" d="M919.36,499.83c0.05,53.4-10.1,107.34-31.27,158.86c-1.74,4.2-3.54,8.41-5.43,12.58
+            c-5.78,12.88-12.29,25.6-19.51,38.1c-9.38,16.25-19.69,31.64-30.83,46.12c-0.19,0.27-0.39,0.54-0.61,0.81
+            c-34.01,44.1-75.65,79.86-121.92,106.51L500.25,499.85L919.36,499.83z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_9_" filterUnits="userSpaceOnUse" x="500.2" y="499.84" width="419.04" height="122.56">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="500.2" y="499.84" width="419.04" height="122.56" id="SVGID_22_">
+            <g class="st39">
+              
+                <linearGradient id="SVGID_23_" gradientUnits="userSpaceOnUse" x1="7382.146" y1="-6296.2305" x2="7504.7075" y2="-6296.2305" gradientTransform="matrix(0 -1 1 0 6970.564 8004.5444)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st40" d="M486.43,523.68l13.77-23.85h418.97l0.07,0.06c-0.01,7.94-0.25,15.88-0.7,23.79
+                c-0.46,7.98-1.15,15.93-2.07,23.86c-2.92,25.4-8.16,50.46-15.62,74.86H429.43l43.23-74.86L486.43,523.68z"/>
+            </g>
+          </mask>
+          
+            <linearGradient id="SVGID_24_" gradientUnits="userSpaceOnUse" x1="7382.146" y1="-6260.8452" x2="7504.7075" y2="-6260.8452" gradientTransform="matrix(0 -1 1 0 6970.564 8004.5444)">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#000000"/>
+          </linearGradient>
+          <path class="st41" d="M500.2,499.84h418.97l0.07,0.06c-0.01,7.94-0.25,15.88-0.7,23.79c-0.46,7.98-1.15,15.93-2.07,23.86
+            c-2.92,25.4-8.16,50.46-15.62,74.86H571.01L500.2,499.84z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_10_" filterUnits="userSpaceOnUse" x="500.2" y="499.84" width="419.04" height="47.7">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="500.2" y="499.84" width="419.04" height="47.7" id="SVGID_25_">
+            <g class="st42">
+              
+                <linearGradient id="SVGID_26_" gradientUnits="userSpaceOnUse" x1="7457.0029" y1="-6274.6162" x2="7504.7075" y2="-6274.6162" gradientTransform="matrix(0 -1 1 0 6970.564 8004.5444)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st43" d="M500.2,499.84h418.97l0.07,0.06c-0.01,7.94-0.25,15.88-0.7,23.79c-0.46,7.98-1.15,15.93-2.07,23.86H472.66
+                l13.77-23.86L500.2,499.84z"/>
+            </g>
+          </mask>
+          <path class="st44" d="M500.2,499.84h418.97l0.07,0.06c-0.01,7.94-0.25,15.88-0.7,23.79c-0.46,7.98-1.15,15.93-2.07,23.86H527.78
+            L500.2,499.84z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_11_" filterUnits="userSpaceOnUse" x="500.2" y="499.84" width="419.04" height="23.85">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="500.2" y="499.84" width="419.04" height="23.85" id="SVGID_27_">
+            <g class="st45">
+              
+                <linearGradient id="SVGID_28_" gradientUnits="userSpaceOnUse" x1="7480.8599" y1="-6267.7305" x2="7504.7075" y2="-6267.7305" gradientTransform="matrix(0 -1 1 0 6970.564 8004.5444)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st46" d="M486.43,523.68l13.77-23.85h418.97l0.07,0.06c-0.01,7.94-0.25,15.88-0.7,23.79H486.43z"/>
+            </g>
+          </mask>
+          <path class="st47" d="M500.2,499.84h418.97l0.07,0.06c-0.01,7.94-0.25,15.88-0.7,23.79H514.07L500.2,499.84z"/>
+          <g id="pie_x5F_p3_x5F_icon">
+            <circle class="st11" cx="761.3" cy="708.98" r="21"/>
+            <path class="st48" d="M763.65,701.16c5.32,0,9.63-1.78,9.63-3.97s-4.31-3.97-9.63-3.97s-9.63,1.78-9.63,3.97
+              S758.33,701.16,763.65,701.16z"/>
+            <path class="st48" d="M773.29,697.2v3.4c0,2.19-4.32,3.97-9.63,3.97c-5.32,0-9.63-1.78-9.63-3.97v-3.4"/>
+            <path class="st48" d="M755.72,702.85v-3.4"/>
+            <path class="st48" d="M757.99,703.8v-3.4"/>
+            <path class="st48" d="M760.25,704.3v-3.4"/>
+            <path class="st48" d="M762.52,704.54v-3.4"/>
+            <path class="st48" d="M764.79,704.54v-3.4"/>
+            <path class="st48" d="M767.05,704.3v-3.4"/>
+            <path class="st48" d="M769.32,703.8v-3.4"/>
+            <path class="st48" d="M771.59,702.85v-3.4"/>
+            <path class="st48" d="M768.75,706.87c2.72,0.7,4.53,1.95,4.53,3.37c0,0.84-0.63,1.61-1.7,2.26c-0.61,0.36-1.38,0.69-2.27,0.95
+              c-0.69,0.2-1.45,0.37-2.27,0.5c-0.14,0.02-0.26,0.05-0.39,0.06c0,0,0,0-0.01,0c-0.6,0.08-1.22,0.14-1.87,0.17
+              c-0.37,0.01-0.75,0.02-1.13,0.02c-0.39,0-0.76-0.01-1.13-0.02c-0.78-0.03-1.55-0.11-2.27-0.23c-0.82-0.12-1.58-0.29-2.27-0.5
+              c-0.7-0.22-1.35-0.46-1.88-0.75c-0.14-0.07-0.26-0.14-0.37-0.22c-1.07-0.65-1.7-1.42-1.7-2.26c0-0.01,0-0.02,0-0.03"/>
+            <path class="st48" d="M773.29,710.23v3.4c0,2.19-4.32,3.97-9.63,3.97c-5.32,0-9.63-1.78-9.63-3.97v-3.4"/>
+            <path class="st48" d="M755.72,715.89v-3.4"/>
+            <path class="st48" d="M757.99,716.84v-3.4"/>
+            <path class="st48" d="M760.25,717.34v-3.4"/>
+            <path class="st48" d="M762.52,717.58v-3.4"/>
+            <path class="st48" d="M764.79,717.58v-3.4"/>
+            <path class="st48" d="M767.05,717.34v-3.4"/>
+            <path class="st48" d="M769.32,716.84v-3.4"/>
+            <path class="st48" d="M771.59,715.89v-3.4"/>
+            <path class="st48" d="M754.02,700.06c-2.72,0.7-4.53,1.95-4.53,3.37c0,0.84,0.63,1.61,1.7,2.26c0.61,0.36,1.38,0.69,2.27,0.95
+              c0.69,0.2,1.45,0.37,2.27,0.5c0.45,0.08,0.93,0.12,1.42,0.17c0.28,0.02,0.57,0.05,0.85,0.06c0.37,0.01,0.75,0.02,1.13,0.02
+              s0.76-0.01,1.13-0.02c0.78-0.03,1.55-0.11,2.27-0.23c0.82-0.12,1.58-0.29,2.27-0.5c0.31-0.09,0.59-0.19,0.85-0.29
+              c0.53-0.2,1.01-0.43,1.42-0.67c0.83-0.5,1.39-1.07,1.61-1.69v-0.01"/>
+            <path class="st48" d="M766.68,700.96h-0.01"/>
+            <path class="st48" d="M749.49,703.43v3.4c0,0.84,0.63,1.61,1.7,2.26c0.61,0.36,1.38,0.69,2.27,0.95c0.18,0.06,0.37,0.1,0.57,0.16
+              c0.53,0.14,1.11,0.26,1.7,0.34c0.71,0.11,1.48,0.19,2.27,0.23c0.37,0.01,0.75,0.02,1.13,0.02s0.76-0.01,1.13-0.02
+              c0.78-0.03,1.55-0.11,2.27-0.23c0.82-0.12,1.58-0.29,2.27-0.5c0.88-0.26,1.65-0.59,2.27-0.95c1.07-0.63,1.68-1.39,1.7-2.22
+              c0-0.01,0-0.02,0-0.03v-2.87"/>
+            <path class="st48" d="M751.19,709.09v-3.4"/>
+            <path class="st48" d="M753.45,710.04v-3.4"/>
+            <path class="st48" d="M755.72,710.54v-3.4"/>
+            <path class="st48" d="M757.99,710.78v-3.4"/>
+            <path class="st48" d="M760.25,710.78v-3.4"/>
+            <path class="st48" d="M762.52,710.54v-3.4"/>
+            <path class="st48" d="M764.79,710.04v-3.4"/>
+            <path class="st48" d="M767.06,709.09v-3.4"/>
+            <path class="st48" d="M754.02,713.1c-2.72,0.7-4.53,1.95-4.53,3.37c0,0.84,0.63,1.61,1.7,2.26c0.61,0.36,1.38,0.69,2.27,0.95
+              c0.69,0.2,1.45,0.37,2.27,0.5c0.71,0.11,1.48,0.19,2.27,0.23c0.37,0.01,0.75,0.02,1.13,0.02s0.76-0.01,1.13-0.02
+              c0.78-0.03,1.55-0.11,2.27-0.23c0.82-0.12,1.58-0.29,2.27-0.5c0.88-0.26,1.65-0.59,2.27-0.95c0.83-0.5,1.39-1.07,1.61-1.69v-0.01
+              "/>
+            <path class="st48" d="M749.49,716.47v3.4c0,0.84,0.63,1.61,1.7,2.26c0.61,0.36,1.38,0.69,2.27,0.95c0.69,0.2,1.45,0.37,2.27,0.5
+              c0.71,0.11,1.48,0.19,2.27,0.23c0.37,0.01,0.75,0.02,1.13,0.02s0.76-0.01,1.13-0.02c0.78-0.03,1.55-0.11,2.27-0.23
+              c0.82-0.12,1.58-0.29,2.27-0.5c0.88-0.26,1.65-0.59,2.27-0.95c1.07-0.65,1.7-1.42,1.7-2.26V717"/>
+            <path class="st48" d="M751.19,722.12v-3.4"/>
+            <path class="st48" d="M753.45,723.07v-3.4"/>
+            <path class="st48" d="M755.72,723.57v-3.4"/>
+            <path class="st48" d="M757.99,723.81v-3.4"/>
+            <path class="st48" d="M760.25,723.81v-3.4"/>
+            <path class="st48" d="M762.52,723.57v-3.4"/>
+            <path class="st48" d="M764.79,723.07v-3.4"/>
+            <path class="st48" d="M767.06,722.12v-3.4"/>
+          </g>
+          <g id="pie_x5F_p3_x5F_number">
+            <circle class="st14" cx="761.17" cy="590.38" r="21"/>
+            <path class="st11" d="M762.45,589.83c1.12,0.18,1.97,0.6,2.57,1.26c0.59,0.64,0.89,1.44,0.89,2.4c0,0.74-0.19,1.43-0.58,2.06
+              c-0.39,0.62-0.98,1.12-1.78,1.49c-0.79,0.38-1.76,0.56-2.91,0.56c-0.9,0-1.78-0.12-2.66-0.35c-0.86-0.24-1.6-0.58-2.2-1.02
+              l1.15-2.26c0.49,0.36,1.04,0.65,1.67,0.86c0.64,0.19,1.3,0.29,1.97,0.29c0.74,0,1.32-0.14,1.75-0.42
+              c0.42-0.29,0.64-0.7,0.64-1.22c0-1.04-0.79-1.57-2.38-1.57h-1.35v-1.95l2.62-2.97h-5.42v-2.37h8.92v1.91L762.45,589.83z"/>
+          </g>
+          <foreignObject x="625" y="620" height="50" width="270">
+            <div class="pie__part-text" xmlns="http://www.w3.org/1999/xhtml">
+              Identifies your goals<br>and objectives
+            </div>
+          </foreignObject>
+        </g>
+        <g class="pie__part form-trigger" data-index="2" id="pie_x5F_p2">
+          <path class="st49" d="M919.36,499.86l-419.11-0.01l209.55-362.97c46.27,26.65,87.9,62.42,121.92,106.51
+            c5.21,6.74,10.23,13.66,15.05,20.79c5.75,8.44,11.21,17.15,16.39,26.14c9.56,16.55,17.85,33.49,24.94,50.68
+            c3.01,7.35,5.81,14.74,8.38,22.18C911.94,407.89,919.41,454.07,919.36,499.86z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_12_" filterUnits="userSpaceOnUse" x="500.22" y="137.01" width="306.47" height="362.87">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="500.22" y="137.01" width="306.47" height="362.87" id="SVGID_29_">
+            <g class="st50">
+              
+                <linearGradient id="SVGID_30_" gradientUnits="userSpaceOnUse" x1="13728.3232" y1="-2793.3274" x2="13850.8945" y2="-2793.3274" gradientTransform="matrix(-0.866 -0.5 0.5 -0.866 13978.8184 4855.502)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st51" d="M513.98,523.73l-13.77-23.85L709.7,137.04l0.08-0.03c6.87,3.98,13.63,8.15,20.25,12.51
+                c6.68,4.39,13.22,8.96,19.63,13.72c20.54,15.23,39.62,32.3,57.02,50.96L570.97,622.45l-43.21-74.87L513.98,523.73z"/>
+            </g>
+          </mask>
+          
+            <linearGradient id="SVGID_31_" gradientUnits="userSpaceOnUse" x1="13728.3252" y1="-2757.9417" x2="13850.8945" y2="-2757.9417" gradientTransform="matrix(-0.866 -0.5 0.5 -0.866 13978.8184 4855.502)">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#000000"/>
+          </linearGradient>
+          <path class="st52" d="M500.22,499.88L709.7,137.04l0.08-0.03c6.87,3.98,13.63,8.15,20.25,12.51c6.68,4.39,13.22,8.96,19.63,13.72
+            c20.54,15.23,39.62,32.3,57.02,50.96l-164.89,285.6L500.22,499.88z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_13_" filterUnits="userSpaceOnUse" x="500.22" y="137.01" width="249.45" height="362.87">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="500.22" y="137.01" width="249.45" height="362.87" id="SVGID_32_">
+            <g class="st53">
+              
+                <linearGradient id="SVGID_33_" gradientUnits="userSpaceOnUse" x1="13803.1826" y1="-2771.7131" x2="13850.8945" y2="-2771.7131" gradientTransform="matrix(-0.866 -0.5 0.5 -0.866 13978.8184 4855.502)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st54" d="M500.22,499.88L709.7,137.04l0.08-0.03c6.87,3.98,13.63,8.15,20.25,12.51
+                c6.68,4.39,13.22,8.96,19.63,13.72l-221.9,384.35l-13.78-23.86L500.22,499.88z"/>
+            </g>
+          </mask>
+          <path class="st55" d="M500.22,499.88L709.7,137.04l0.08-0.03c6.87,3.98,13.63,8.15,20.25,12.51c6.68,4.39,13.22,8.96,19.63,13.72
+            L555.31,499.86L500.22,499.88z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_14_" filterUnits="userSpaceOnUse" x="500.22" y="137.01" width="229.82" height="362.87">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="500.22" y="137.01" width="229.82" height="362.87" id="SVGID_34_">
+            <g class="st56">
+              
+                <linearGradient id="SVGID_35_" gradientUnits="userSpaceOnUse" x1="13827.041" y1="-2764.8274" x2="13850.8945" y2="-2764.8274" gradientTransform="matrix(-0.866 -0.5 0.5 -0.866 13978.8184 4855.502)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st57" d="M513.98,523.73l-13.77-23.85L709.7,137.04l0.08-0.03c6.87,3.98,13.63,8.15,20.25,12.51L513.98,523.73z"/>
+            </g>
+          </mask>
+          <path class="st58" d="M500.22,499.88L709.7,137.04l0.08-0.03c6.87,3.98,13.63,8.15,20.25,12.51L527.8,499.8L500.22,499.88z"/>
+          <g id="pie_x5F_p2_x5F_icon">
+            <circle class="st11" cx="762.26" cy="422.66" r="21"/>
+            <path class="st59" d="M771.82,428.24c1.9,0,3.45-0.66,3.45-1.48s-1.54-1.48-3.45-1.48c-1.9,0-3.45,0.66-3.45,1.48
+              S769.92,428.24,771.82,428.24z"/>
+            <path class="st59" d="M771.82,428.24c1.9,0,3.45-0.66,3.45-1.48s-1.54-1.48-3.45-1.48c-1.9,0-3.45,0.66-3.45,1.48
+              S769.92,428.24,771.82,428.24z"/>
+            <path class="st59" d="M771.82,428.24c1.9,0,3.45-0.66,3.45-1.48s-1.54-1.48-3.45-1.48c-1.9,0-3.45,0.66-3.45,1.48
+              S769.92,428.24,771.82,428.24z"/>
+            <path class="st59" d="M768.38,428.73c0,0.82,1.55,1.48,3.45,1.48s3.45-0.66,3.45-1.48"/>
+            <path class="st59" d="M768.38,430.7c0,0.82,1.55,1.48,3.45,1.48s3.45-0.66,3.45-1.48"/>
+            <path class="st59" d="M768.38,432.67c0,0.82,1.55,1.48,3.45,1.48s3.45-0.66,3.45-1.48"/>
+            <path class="st59" d="M775.27,426.76v1.97v1.97v1.97v1.97c0,0.82-1.54,1.48-3.45,1.48s-3.45-0.66-3.45-1.48v-1.97v-1.97v-1.97
+              v-1.97"/>
+            <path class="st59" d="M764.93,432.18c1.9,0,3.45-0.66,3.45-1.48s-1.54-1.48-3.45-1.48c-1.9,0-3.45,0.66-3.45,1.48
+              S763.03,432.18,764.93,432.18z"/>
+            <path class="st59" d="M764.93,432.18c1.9,0,3.45-0.66,3.45-1.48s-1.54-1.48-3.45-1.48c-1.9,0-3.45,0.66-3.45,1.48
+              S763.03,432.18,764.93,432.18z"/>
+            <path class="st59" d="M764.93,432.18c1.9,0,3.45-0.66,3.45-1.48s-1.54-1.48-3.45-1.48c-1.9,0-3.45,0.66-3.45,1.48
+              S763.03,432.18,764.93,432.18z"/>
+            <path class="st59" d="M761.49,432.67c0,0.82,1.55,1.48,3.45,1.48s3.45-0.66,3.45-1.48"/>
+            <path class="st59" d="M761.49,430.7v1.97v1.97c0,0.82,1.54,1.48,3.45,1.48s3.45-0.66,3.45-1.48"/>
+            <path class="st60" d="M771.92,423.82c0.26-0.94,0.39-1.94,0.39-2.96c0-6.25-5.07-11.32-11.32-11.32
+              c-6.25,0-11.32,5.07-11.32,11.32c0,5.95,4.58,10.82,10.4,11.28"/>
+            <path class="st59" d="M760.99,414.95v5.91h3.94"/>
+            <path class="st59" d="M760.99,409.53V412"/>
+            <path class="st59" d="M755.33,411.05l0.74,1.28"/>
+            <path class="st59" d="M751.19,415.19l1.28,0.74"/>
+            <path class="st59" d="M751.19,426.52l1.28-0.74"/>
+            <path class="st59" d="M755.33,430.66l0.74-1.28"/>
+            <path class="st59" d="M770.8,415.19l-1.28,0.74"/>
+            <path class="st59" d="M766.65,411.05l-0.74,1.28"/>
+            <path class="st59" d="M749.67,420.85h2.46"/>
+            <path class="st59" d="M772.31,420.85h-2.46"/>
+          </g>
+          <g id="pie_x5F_p2_x5F_number">
+            <circle class="st14" cx="762.02" cy="307.02" r="21"/>
+            <path class="st11" d="M766.88,311.62v2.4h-9.63v-1.91l4.91-4.64c0.52-0.5,0.87-0.92,1.06-1.27c0.18-0.36,0.27-0.72,0.27-1.07
+              c0-0.51-0.18-0.9-0.53-1.16c-0.34-0.28-0.84-0.42-1.51-0.42c-0.56,0-1.06,0.11-1.51,0.33c-0.45,0.21-0.83,0.52-1.13,0.95
+              l-2.15-1.38c0.5-0.74,1.18-1.32,2.06-1.73c0.87-0.42,1.87-0.64,3-0.64c0.95,0,1.77,0.16,2.48,0.47c0.72,0.3,1.27,0.74,1.66,1.31
+              c0.4,0.56,0.6,1.22,0.6,1.98c0,0.69-0.15,1.34-0.44,1.95s-0.86,1.3-1.69,2.07l-2.93,2.77H766.88z"/>
+          </g>
+          <foreignObject x="625" y="338" height="50" width="270">
+            <div class="pie__part-text" xmlns="http://www.w3.org/1999/xhtml">
+              Monitors and reviews<br>your investments
+            </div>
+          </foreignObject>
+        </g>
+        <g class="pie__part form-trigger" data-index="1" id="pie_x5F_p1">
+          <path class="st61" d="M709.81,136.89L500.25,499.85L290.69,136.89c46.22-26.75,98-44.92,153.2-52.33
+            c4.42-0.6,8.88-1.13,13.36-1.58c14.14-1.45,28.49-2.18,43.01-2.18c19.11,0,37.94,1.27,56.36,3.76c4.56,0.6,9.09,1.29,13.6,2.05
+            C620.31,95.04,667.41,112.35,709.81,136.89z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_15_" filterUnits="userSpaceOnUse" x="290.78" y="91.64" width="280.23" height="408.25">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="290.78" y="91.64" width="280.23" height="408.25" id="SVGID_36_">
+            <g class="st62">
+              
+                <linearGradient id="SVGID_37_" gradientUnits="userSpaceOnUse" x1="13867.1826" y1="4454.4038" x2="13989.752" y2="4454.4038" gradientTransform="matrix(-0.866 0.5 -0.5 -0.866 14755.5225 -2788.2725)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st63" d="M527.8,499.89l-27.54,0L290.78,137.05l0.02-0.09c6.88-3.96,13.87-7.72,20.96-11.28
+                c7.14-3.59,14.37-6.97,21.69-10.14c23.46-10.17,47.78-18.16,72.64-23.9L641.79,499.9l-86.44-0.01L527.8,499.89z"/>
+            </g>
+          </mask>
+          
+            <linearGradient id="SVGID_38_" gradientUnits="userSpaceOnUse" x1="13867.1826" y1="4489.7915" x2="13989.752" y2="4489.7915" gradientTransform="matrix(-0.866 0.5 -0.5 -0.866 14755.5225 -2788.2725)">
+            <stop  offset="0" style="stop-color:#FFFFFF"/>
+            <stop  offset="1" style="stop-color:#000000"/>
+          </linearGradient>
+          <path class="st64" d="M500.26,499.89L290.78,137.05l0.02-0.09c6.88-3.96,13.87-7.72,20.96-11.28c7.14-3.59,14.37-6.97,21.69-10.14
+            c23.46-10.17,47.78-18.16,72.64-23.9L571,377.3L500.26,499.89z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_16_" filterUnits="userSpaceOnUse" x="290.78" y="115.54" width="237.06" height="384.35">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="290.78" y="115.54" width="237.06" height="384.35" id="SVGID_39_">
+            <g class="st65">
+              
+                <linearGradient id="SVGID_40_" gradientUnits="userSpaceOnUse" x1="13942.041" y1="4476.019" x2="13989.752" y2="4476.019" gradientTransform="matrix(-0.866 0.5 -0.5 -0.866 14755.5225 -2788.2725)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st66" d="M500.26,499.89L290.78,137.05l0.02-0.09c6.88-3.96,13.87-7.72,20.96-11.28
+                c7.14-3.59,14.37-6.97,21.69-10.14l221.9,384.35l-27.55,0L500.26,499.89z"/>
+            </g>
+          </mask>
+          <path class="st67" d="M500.26,499.89L290.78,137.05l0.02-0.09c6.88-3.96,13.87-7.72,20.96-11.28c7.14-3.59,14.37-6.97,21.69-10.14
+            l194.39,336.7L500.26,499.89z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_17_" filterUnits="userSpaceOnUse" x="290.78" y="125.68" width="223.22" height="374.21">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="290.78" y="125.68" width="223.22" height="374.21" id="SVGID_41_">
+            <g class="st68">
+              
+                <linearGradient id="SVGID_42_" gradientUnits="userSpaceOnUse" x1="13965.8984" y1="4482.9053" x2="13989.752" y2="4482.9053" gradientTransform="matrix(-0.866 0.5 -0.5 -0.866 14755.5225 -2788.2725)">
+                <stop  offset="0" style="stop-color:#000000"/>
+                <stop  offset="0.1691" style="stop-color:#030303"/>
+                <stop  offset="0.3003" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.4189" style="stop-color:#1D1D1D"/>
+                <stop  offset="0.53" style="stop-color:#353535"/>
+                <stop  offset="0.6359" style="stop-color:#535353"/>
+                <stop  offset="0.7379" style="stop-color:#787878"/>
+                <stop  offset="0.8367" style="stop-color:#A4A4A4"/>
+                <stop  offset="0.9307" style="stop-color:#D5D5D5"/>
+                <stop  offset="1" style="stop-color:#FFFFFF"/>
+              </linearGradient>
+              <path class="st69" d="M527.8,499.89l-27.54,0L290.78,137.05l0.02-0.09c6.88-3.96,13.87-7.72,20.96-11.28L527.8,499.89z"/>
+            </g>
+          </mask>
+          <path class="st70" d="M514,476l-13.74,23.89L290.78,137.05l0.02-0.09c6.88-3.96,13.87-7.72,20.96-11.28L514,476z"/>
+          <g id="pie_x5F_p1_x5F_icon">
+            <circle class="st11" cx="500.13" cy="258.13" r="21"/>
+            <g>
+              <defs>
+                <rect id="SVGID_43_" x="485.69" y="247.63" width="29.4" height="21"/>
+              </defs>
+              <clipPath id="SVGID_44_">
+                <use xlink:href="#SVGID_43_"  style="overflow:visible;"/>
+              </clipPath>
+              <g class="st71">
+                <path class="st72" d="M501.97,266l1.57-0.52h7.88l-0.19,0.93c-0.2,0.98-1.06,1.69-2.06,1.69h-20.71c-1,0-1.86-0.7-2.06-1.69
+                  l-0.19-0.93h7.88l1.57,0.52H501.97z"/>
+                <path class="st73" d="M488.32,265.48v-14.7h11.03"/>
+                <path class="st73" d="M509.32,265.48v-6.3"/>
+                <path class="st72" d="M500.92,256.03c0,0.87,0.7,1.58,1.57,1.58h10.5c0.87,0,1.57-0.7,1.57-1.58v-6.3
+                  c0-0.87-0.7-1.57-1.57-1.57h-10.5c-0.87,0-1.57,0.7-1.57,1.57V256.03z"/>
+                <path class="st72" d="M514.57,250.78h-13.65"/>
+                <path class="st72" d="M514.57,252.88h-13.65"/>
+                <path class="st72" d="M503.02,254.98h3.15"/>
+              </g>
+            </g>
+          </g>
+          <g id="pie_x5F_p1_x5F_number">
+            <path class="st11" d="M502.13,138.91v12.74h-2.95v-10.37h-2.55v-2.37H502.13z"/>
+            <circle class="st14" cx="500.07" cy="144.65" r="21"/>
+          </g>
+          <foreignObject x="325" y="176" height="50" width="350">
+            <div class="pie__part-text" xmlns="http://www.w3.org/1999/xhtml">
+              Clarifies your current<br>financial situation
+            </div>
+          </foreignObject>
+        </g>
+        <g id="pie_x5F_center">
+          <g>
+            <g>
+              <path class="st74" d="M683.75,499.48c0,101.03-81.9,182.93-182.93,182.93c-101.03,0-182.93-81.9-182.93-182.93
+                c0-101.03,81.9-182.92,182.93-182.92C601.84,316.56,683.75,398.45,683.75,499.48z"/>
+            </g>
+          </g>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_18_" filterUnits="userSpaceOnUse" x="319.96" y="323.1" width="98.7" height="98.7">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="319.96" y="323.1" width="98.7" height="98.7" id="SVGID_45_">
+            <g class="st75">
+              <radialGradient id="SVGID_46_" cx="366.024" cy="372.4563" r="44.4173" gradientUnits="userSpaceOnUse">
+                <stop  offset="0" style="stop-color:#FFFFFF"/>
+                <stop  offset="0.0643" style="stop-color:#D9D9D9"/>
+                <stop  offset="0.1609" style="stop-color:#A7A7A7"/>
+                <stop  offset="0.2621" style="stop-color:#7A7A7A"/>
+                <stop  offset="0.3663" style="stop-color:#545454"/>
+                <stop  offset="0.474" style="stop-color:#363636"/>
+                <stop  offset="0.5865" style="stop-color:#1E1E1E"/>
+                <stop  offset="0.7057" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.8363" style="stop-color:#030303"/>
+                <stop  offset="1" style="stop-color:#000000"/>
+              </radialGradient>
+              <path class="st76" d="M410.44,372.45c0,24.53-19.88,44.42-44.41,44.42c-24.53,0-44.42-19.89-44.42-44.42
+                c0-24.52,19.89-44.41,44.42-44.41C390.56,328.04,410.44,347.93,410.44,372.45z"/>
+            </g>
+          </mask>
+          <path class="st77" d="M418.67,372.45c0,27.26-22.08,49.35-49.34,49.35c-27.26,0-49.36-22.09-49.36-49.35
+            c0-27.25,22.1-49.35,49.36-49.35C396.59,323.1,418.67,345.2,418.67,372.45z"/>
+          <defs>
+            <filter id="Adobe_OpacityMaskFilter_19_" filterUnits="userSpaceOnUse" x="353.97" y="357.11" width="30.69" height="30.69">
+              <feColorMatrix  type="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 1 0"/>
+            </filter>
+          </defs>
+          <mask maskUnits="userSpaceOnUse" x="353.97" y="357.11" width="30.69" height="30.69" id="SVGID_47_">
+            <g class="st78">
+              <radialGradient id="SVGID_48_" cx="368.2917" cy="372.4526" r="13.8094" gradientUnits="userSpaceOnUse">
+                <stop  offset="0" style="stop-color:#FFFFFF"/>
+                <stop  offset="0.0643" style="stop-color:#D9D9D9"/>
+                <stop  offset="0.1609" style="stop-color:#A7A7A7"/>
+                <stop  offset="0.2621" style="stop-color:#7A7A7A"/>
+                <stop  offset="0.3663" style="stop-color:#545454"/>
+                <stop  offset="0.474" style="stop-color:#363636"/>
+                <stop  offset="0.5865" style="stop-color:#1E1E1E"/>
+                <stop  offset="0.7057" style="stop-color:#0D0D0D"/>
+                <stop  offset="0.8363" style="stop-color:#030303"/>
+                <stop  offset="1" style="stop-color:#000000"/>
+              </radialGradient>
+              <path class="st79" d="M382.1,372.45c0,7.63-6.18,13.81-13.81,13.81c-7.63,0-13.81-6.19-13.81-13.81
+                c0-7.62,6.18-13.81,13.81-13.81C375.92,358.64,382.1,364.83,382.1,372.45z"/>
+            </g>
+          </mask>
+          <path class="st80" d="M384.66,372.45c0,8.48-6.86,15.34-15.34,15.34c-8.47,0-15.35-6.87-15.35-15.34
+            c0-8.47,6.87-15.34,15.35-15.34C377.79,357.11,384.66,363.98,384.66,372.45z"/>
+          <path class="st81" d="M500.82,683.23c101.33,0,183.75-82.44,183.75-183.75c0-101.32-82.42-183.75-183.75-183.75
+            c-101.32,0-183.75,82.44-183.75,183.75C317.07,600.8,399.51,683.23,500.82,683.23z M500.82,316.55
+            c101.04,0,182.93,81.9,182.93,182.93c0,101.04-81.9,182.93-182.93,182.93c-101.02,0-182.93-81.9-182.93-182.93
+            C317.89,398.45,399.8,316.55,500.82,316.55z"/>
+          <g>
+            <g>
+              <linearGradient id="SVGID_49_" gradientUnits="userSpaceOnUse" x1="389.7275" y1="388.3912" x2="611.9074" y2="610.5711">
+                <stop  offset="0" style="stop-color:#FFFFFF"/>
+                <stop  offset="0.5571" style="stop-color:#E3E3E3"/>
+                <stop  offset="1" style="stop-color:#D1D1D1"/>
+              </linearGradient>
+              <path class="st82" d="M657.92,499.48c0,86.77-70.34,157.11-157.11,157.11c-86.76,0-157.1-70.34-157.1-157.11
+                c0-86.76,70.34-157.1,157.1-157.1C587.58,342.38,657.92,412.72,657.92,499.48z"/>
+            </g>
+          </g>
+          <linearGradient id="SVGID_50_" gradientUnits="userSpaceOnUse" x1="391.0333" y1="389.7083" x2="610.5784" y2="609.2534">
+            <stop  offset="0" style="stop-color:#E5E5E5"/>
+            <stop  offset="0.0786" style="stop-color:#E8E8E8"/>
+            <stop  offset="0.6051" style="stop-color:#F9F9F9"/>
+            <stop  offset="1" style="stop-color:#FFFFFF"/>
+          </linearGradient>
+          <path class="st83" d="M656.05,499.48c0,85.74-69.5,155.25-155.25,155.25c-85.73,0-155.24-69.51-155.24-155.25
+            c0-85.73,69.51-155.24,155.24-155.24C586.54,344.24,656.05,413.74,656.05,499.48z"/>
+            <foreignObject x="350" y="404" height="205" width="290">
+              <div class="pie__mid-text" xmlns="http://www.w3.org/1999/xhtml">
+                Here's why you need a Personal Financial Planner
+              </div>
+            </foreignObject>
+        </g>
       </g>
-    </g>
-  </svg>
-  <div class="pie__mid-shadow"></div>  
+    </svg>
+    <div class="pie__mid-shadow"></div>  
+  </div>
 </div>
 <script>
   document.addEventListener("DOMContentLoaded", function(event) { 
